@@ -36,7 +36,7 @@ var lyr_LPSZone_2 = new ol.layer.Vector({
                 source:jsonSource_LPSZone_2, 
                 style: style_LPSZone_2,
                 popuplayertitle: "LPS Zone",
-                interactive: true,
+                interactive: false,
     title: 'LPS Zone<br />\
     <img src="styles/legend/LPSZone_2_0.png" /> Canal development<br />\
     <img src="styles/legend/LPSZone_2_1.png" /> Caravan / chalet park<br />\
@@ -85,7 +85,7 @@ var lyr_RegionSchemeZones_3 = new ol.layer.Vector({
                 source:jsonSource_RegionSchemeZones_3, 
                 style: style_RegionSchemeZones_3,
                 popuplayertitle: "Region Scheme Zones",
-                interactive: true,
+                interactive: false,
     title: 'Region Scheme Zones<br />\
     <img src="styles/legend/RegionSchemeZones_3_0.png" /> Central city area<br />\
     <img src="styles/legend/RegionSchemeZones_3_1.png" /> Civic and cultural<br />\
@@ -133,16 +133,15 @@ var lyr_PerthandPeelLandUse_4 = new ol.layer.Vector({
                 source:jsonSource_PerthandPeelLandUse_4, 
                 style: style_PerthandPeelLandUse_4,
                 popuplayertitle: "Perth and Peel Land Use",
-                interactive: true,
+                interactive: false,
     title: 'Perth and Peel Land Use<br />\
     <img src="styles/legend/PerthandPeelLandUse_4_0.png" /> Planning Investigation<br />\
-    <img src="styles/legend/PerthandPeelLandUse_4_1.png" /> Rural Residential<br />\
-    <img src="styles/legend/PerthandPeelLandUse_4_2.png" /> Rural Residential Investigation<br />\
+    <img src="styles/legend/PerthandPeelLandUse_4_1.png" /> Urban Expansion<br />\
+    <img src="styles/legend/PerthandPeelLandUse_4_2.png" /> Urban Investigation<br />\
     <img src="styles/legend/PerthandPeelLandUse_4_3.png" /> Urban<br />\
     <img src="styles/legend/PerthandPeelLandUse_4_4.png" /> Urban Deferred<br />\
-    <img src="styles/legend/PerthandPeelLandUse_4_5.png" /> Urban Expansion<br />\
-    <img src="styles/legend/PerthandPeelLandUse_4_6.png" /> Urban Investigation<br />\
-    <img src="styles/legend/PerthandPeelLandUse_4_7.png" /> <br />'
+    <img src="styles/legend/PerthandPeelLandUse_4_5.png" /> Rural Residential<br />\
+    <img src="styles/legend/PerthandPeelLandUse_4_6.png" /> Rural Residential Investigation<br />'
         });
 var format_CoastalPlanExtents_5 = new ol.format.GeoJSON();
 var features_CoastalPlanExtents_5 = format_CoastalPlanExtents_5.readFeatures(json_CoastalPlanExtents_5, 
@@ -444,258 +443,571 @@ var lyr_AcidSulfateSoilRisk_24 = new ol.layer.Vector({
                 interactive: false,
                 title: '<img src="styles/legend/AcidSulfateSoilRisk_24.png" /> Acid Sulfate Soil Risk'
             });
-var format_Floodway_25 = new ol.format.GeoJSON();
-var features_Floodway_25 = format_Floodway_25.readFeatures(json_Floodway_25, 
+var format_WBWaterwaysBuffered_25 = new ol.format.GeoJSON();
+var features_WBWaterwaysBuffered_25 = format_WBWaterwaysBuffered_25.readFeatures(json_WBWaterwaysBuffered_25, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Floodway_25 = new ol.source.Vector({
+var jsonSource_WBWaterwaysBuffered_25 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Floodway_25.addFeatures(features_Floodway_25);
-var lyr_Floodway_25 = new ol.layer.Vector({
+jsonSource_WBWaterwaysBuffered_25.addFeatures(features_WBWaterwaysBuffered_25);
+var lyr_WBWaterwaysBuffered_25 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_Floodway_25, 
-                style: style_Floodway_25,
-                popuplayertitle: "Floodway",
+                source:jsonSource_WBWaterwaysBuffered_25, 
+                style: style_WBWaterwaysBuffered_25,
+                popuplayertitle: "WB - Waterways Buffered",
                 interactive: false,
-                title: '<img src="styles/legend/Floodway_25.png" /> Floodway'
+                title: '<img src="styles/legend/WBWaterwaysBuffered_25.png" /> WB - Waterways Buffered'
             });
-var format_HHHeritageAgreements_26 = new ol.format.GeoJSON();
-var features_HHHeritageAgreements_26 = format_HHHeritageAgreements_26.readFeatures(json_HHHeritageAgreements_26, 
+var format_FWFloodway_26 = new ol.format.GeoJSON();
+var features_FWFloodway_26 = format_FWFloodway_26.readFeatures(json_FWFloodway_26, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_HHHeritageAgreements_26 = new ol.source.Vector({
+var jsonSource_FWFloodway_26 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_HHHeritageAgreements_26.addFeatures(features_HHHeritageAgreements_26);
-var lyr_HHHeritageAgreements_26 = new ol.layer.Vector({
+jsonSource_FWFloodway_26.addFeatures(features_FWFloodway_26);
+var lyr_FWFloodway_26 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_HHHeritageAgreements_26, 
-                style: style_HHHeritageAgreements_26,
-                popuplayertitle: "HH Heritage Agreements",
+                source:jsonSource_FWFloodway_26, 
+                style: style_FWFloodway_26,
+                popuplayertitle: "FW - Floodway",
                 interactive: false,
-                title: '<img src="styles/legend/HHHeritageAgreements_26.png" /> HH Heritage Agreements'
+                title: '<img src="styles/legend/FWFloodway_26.png" /> FW - Floodway'
             });
-var format_ProtectedAreas_27 = new ol.format.GeoJSON();
-var features_ProtectedAreas_27 = format_ProtectedAreas_27.readFeatures(json_ProtectedAreas_27, 
+var format_HAHeritageAgreements_27 = new ol.format.GeoJSON();
+var features_HAHeritageAgreements_27 = format_HAHeritageAgreements_27.readFeatures(json_HAHeritageAgreements_27, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_ProtectedAreas_27 = new ol.source.Vector({
+var jsonSource_HAHeritageAgreements_27 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_ProtectedAreas_27.addFeatures(features_ProtectedAreas_27);
-var lyr_ProtectedAreas_27 = new ol.layer.Vector({
+jsonSource_HAHeritageAgreements_27.addFeatures(features_HAHeritageAgreements_27);
+var lyr_HAHeritageAgreements_27 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_ProtectedAreas_27, 
-                style: style_ProtectedAreas_27,
-                popuplayertitle: "Protected Areas",
+                source:jsonSource_HAHeritageAgreements_27, 
+                style: style_HAHeritageAgreements_27,
+                popuplayertitle: "HA - Heritage Agreements",
                 interactive: false,
-                title: '<img src="styles/legend/ProtectedAreas_27.png" /> Protected Areas'
+                title: '<img src="styles/legend/HAHeritageAgreements_27.png" /> HA - Heritage Agreements'
             });
-var format_HHAssessmentProgram_28 = new ol.format.GeoJSON();
-var features_HHAssessmentProgram_28 = format_HHAssessmentProgram_28.readFeatures(json_HHAssessmentProgram_28, 
+var format_PAProtectedAreas_28 = new ol.format.GeoJSON();
+var features_PAProtectedAreas_28 = format_PAProtectedAreas_28.readFeatures(json_PAProtectedAreas_28, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_HHAssessmentProgram_28 = new ol.source.Vector({
+var jsonSource_PAProtectedAreas_28 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_HHAssessmentProgram_28.addFeatures(features_HHAssessmentProgram_28);
-var lyr_HHAssessmentProgram_28 = new ol.layer.Vector({
+jsonSource_PAProtectedAreas_28.addFeatures(features_PAProtectedAreas_28);
+var lyr_PAProtectedAreas_28 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_HHAssessmentProgram_28, 
-                style: style_HHAssessmentProgram_28,
-                popuplayertitle: "HH Assessment Program",
+                source:jsonSource_PAProtectedAreas_28, 
+                style: style_PAProtectedAreas_28,
+                popuplayertitle: "PA - Protected Areas",
                 interactive: false,
-                title: '<img src="styles/legend/HHAssessmentProgram_28.png" /> HH Assessment Program'
+                title: '<img src="styles/legend/PAProtectedAreas_28.png" /> PA - Protected Areas'
             });
-var format_HHHeritageArea_29 = new ol.format.GeoJSON();
-var features_HHHeritageArea_29 = format_HHHeritageArea_29.readFeatures(json_HHHeritageArea_29, 
+var format_APAssessmentProgram_29 = new ol.format.GeoJSON();
+var features_APAssessmentProgram_29 = format_APAssessmentProgram_29.readFeatures(json_APAssessmentProgram_29, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_HHHeritageArea_29 = new ol.source.Vector({
+var jsonSource_APAssessmentProgram_29 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_HHHeritageArea_29.addFeatures(features_HHHeritageArea_29);
-var lyr_HHHeritageArea_29 = new ol.layer.Vector({
+jsonSource_APAssessmentProgram_29.addFeatures(features_APAssessmentProgram_29);
+var lyr_APAssessmentProgram_29 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_HHHeritageArea_29, 
-                style: style_HHHeritageArea_29,
-                popuplayertitle: "HH Heritage Area",
+                source:jsonSource_APAssessmentProgram_29, 
+                style: style_APAssessmentProgram_29,
+                popuplayertitle: "AP - Assessment Program",
                 interactive: false,
-                title: '<img src="styles/legend/HHHeritageArea_29.png" /> HH Heritage Area'
+                title: '<img src="styles/legend/APAssessmentProgram_29.png" /> AP - Assessment Program'
             });
-var format_HHHeritageList_30 = new ol.format.GeoJSON();
-var features_HHHeritageList_30 = format_HHHeritageList_30.readFeatures(json_HHHeritageList_30, 
+var format_HAHeritageArea_30 = new ol.format.GeoJSON();
+var features_HAHeritageArea_30 = format_HAHeritageArea_30.readFeatures(json_HAHeritageArea_30, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_HHHeritageList_30 = new ol.source.Vector({
+var jsonSource_HAHeritageArea_30 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_HHHeritageList_30.addFeatures(features_HHHeritageList_30);
-var lyr_HHHeritageList_30 = new ol.layer.Vector({
+jsonSource_HAHeritageArea_30.addFeatures(features_HAHeritageArea_30);
+var lyr_HAHeritageArea_30 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_HHHeritageList_30, 
-                style: style_HHHeritageList_30,
-                popuplayertitle: "HH Heritage List",
+                source:jsonSource_HAHeritageArea_30, 
+                style: style_HAHeritageArea_30,
+                popuplayertitle: "HA - Heritage Area",
                 interactive: false,
-                title: '<img src="styles/legend/HHHeritageList_30.png" /> HH Heritage List'
+                title: '<img src="styles/legend/HAHeritageArea_30.png" /> HA - Heritage Area'
             });
-var format_HHLocalSurvey_31 = new ol.format.GeoJSON();
-var features_HHLocalSurvey_31 = format_HHLocalSurvey_31.readFeatures(json_HHLocalSurvey_31, 
+var format_HLHeritageList_31 = new ol.format.GeoJSON();
+var features_HLHeritageList_31 = format_HLHeritageList_31.readFeatures(json_HLHeritageList_31, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_HHLocalSurvey_31 = new ol.source.Vector({
+var jsonSource_HLHeritageList_31 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_HHLocalSurvey_31.addFeatures(features_HHLocalSurvey_31);
-var lyr_HHLocalSurvey_31 = new ol.layer.Vector({
+jsonSource_HLHeritageList_31.addFeatures(features_HLHeritageList_31);
+var lyr_HLHeritageList_31 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_HHLocalSurvey_31, 
-                style: style_HHLocalSurvey_31,
-                popuplayertitle: "HH Local Survey",
+                source:jsonSource_HLHeritageList_31, 
+                style: style_HLHeritageList_31,
+                popuplayertitle: "HL - Heritage List",
                 interactive: false,
-                title: '<img src="styles/legend/HHLocalSurvey_31.png" /> HH Local Survey'
+                title: '<img src="styles/legend/HLHeritageList_31.png" /> HL - Heritage List'
             });
-var format_HHProtectionOrder_32 = new ol.format.GeoJSON();
-var features_HHProtectionOrder_32 = format_HHProtectionOrder_32.readFeatures(json_HHProtectionOrder_32, 
+var format_LSLocalSurvey_32 = new ol.format.GeoJSON();
+var features_LSLocalSurvey_32 = format_LSLocalSurvey_32.readFeatures(json_LSLocalSurvey_32, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_HHProtectionOrder_32 = new ol.source.Vector({
+var jsonSource_LSLocalSurvey_32 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_HHProtectionOrder_32.addFeatures(features_HHProtectionOrder_32);
-var lyr_HHProtectionOrder_32 = new ol.layer.Vector({
+jsonSource_LSLocalSurvey_32.addFeatures(features_LSLocalSurvey_32);
+var lyr_LSLocalSurvey_32 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_HHProtectionOrder_32, 
-                style: style_HHProtectionOrder_32,
-                popuplayertitle: "HH Protection Order",
+                source:jsonSource_LSLocalSurvey_32, 
+                style: style_LSLocalSurvey_32,
+                popuplayertitle: "LS - Local Survey",
                 interactive: false,
-                title: '<img src="styles/legend/HHProtectionOrder_32.png" /> HH Protection Order'
+                title: '<img src="styles/legend/LSLocalSurvey_32.png" /> LS - Local Survey'
             });
-var format_HHStateRegister_33 = new ol.format.GeoJSON();
-var features_HHStateRegister_33 = format_HHStateRegister_33.readFeatures(json_HHStateRegister_33, 
+var format_POProtectionOrder_33 = new ol.format.GeoJSON();
+var features_POProtectionOrder_33 = format_POProtectionOrder_33.readFeatures(json_POProtectionOrder_33, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_HHStateRegister_33 = new ol.source.Vector({
+var jsonSource_POProtectionOrder_33 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_HHStateRegister_33.addFeatures(features_HHStateRegister_33);
-var lyr_HHStateRegister_33 = new ol.layer.Vector({
+jsonSource_POProtectionOrder_33.addFeatures(features_POProtectionOrder_33);
+var lyr_POProtectionOrder_33 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_HHStateRegister_33, 
-                style: style_HHStateRegister_33,
-                popuplayertitle: "HH State Register",
+                source:jsonSource_POProtectionOrder_33, 
+                style: style_POProtectionOrder_33,
+                popuplayertitle: "PO - Protection Order",
                 interactive: false,
-                title: '<img src="styles/legend/HHStateRegister_33.png" /> HH State Register'
+                title: '<img src="styles/legend/POProtectionOrder_33.png" /> PO - Protection Order'
             });
-var format_WBWaterwaysBuffered_34 = new ol.format.GeoJSON();
-var features_WBWaterwaysBuffered_34 = format_WBWaterwaysBuffered_34.readFeatures(json_WBWaterwaysBuffered_34, 
+var format_SRStateRegister_34 = new ol.format.GeoJSON();
+var features_SRStateRegister_34 = format_SRStateRegister_34.readFeatures(json_SRStateRegister_34, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_WBWaterwaysBuffered_34 = new ol.source.Vector({
+var jsonSource_SRStateRegister_34 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_WBWaterwaysBuffered_34.addFeatures(features_WBWaterwaysBuffered_34);
-var lyr_WBWaterwaysBuffered_34 = new ol.layer.Vector({
+jsonSource_SRStateRegister_34.addFeatures(features_SRStateRegister_34);
+var lyr_SRStateRegister_34 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_WBWaterwaysBuffered_34, 
-                style: style_WBWaterwaysBuffered_34,
-                popuplayertitle: "WB Waterways Buffered",
+                source:jsonSource_SRStateRegister_34, 
+                style: style_SRStateRegister_34,
+                popuplayertitle: "SR - State Register",
                 interactive: false,
-                title: '<img src="styles/legend/WBWaterwaysBuffered_34.png" /> WB Waterways Buffered'
+                title: '<img src="styles/legend/SRStateRegister_34.png" /> SR - State Register'
             });
-var format_WAPetroleumPipeline_35 = new ol.format.GeoJSON();
-var features_WAPetroleumPipeline_35 = format_WAPetroleumPipeline_35.readFeatures(json_WAPetroleumPipeline_35, 
+var format_WAPPWAPetroleumPipeline_35 = new ol.format.GeoJSON();
+var features_WAPPWAPetroleumPipeline_35 = format_WAPPWAPetroleumPipeline_35.readFeatures(json_WAPPWAPetroleumPipeline_35, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_WAPetroleumPipeline_35 = new ol.source.Vector({
+var jsonSource_WAPPWAPetroleumPipeline_35 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_WAPetroleumPipeline_35.addFeatures(features_WAPetroleumPipeline_35);
-var lyr_WAPetroleumPipeline_35 = new ol.layer.Vector({
+jsonSource_WAPPWAPetroleumPipeline_35.addFeatures(features_WAPPWAPetroleumPipeline_35);
+var lyr_WAPPWAPetroleumPipeline_35 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_WAPetroleumPipeline_35, 
-                style: style_WAPetroleumPipeline_35,
-                popuplayertitle: "WA Petroleum Pipeline",
+                source:jsonSource_WAPPWAPetroleumPipeline_35, 
+                style: style_WAPPWAPetroleumPipeline_35,
+                popuplayertitle: "WAPP - WA Petroleum Pipeline",
                 interactive: false,
-                title: '<img src="styles/legend/WAPetroleumPipeline_35.png" /> WA Petroleum Pipeline'
+                title: '<img src="styles/legend/WAPPWAPetroleumPipeline_35.png" /> WAPP - WA Petroleum Pipeline'
             });
-var format_RegionSchemeSpecialAreas_36 = new ol.format.GeoJSON();
-var features_RegionSchemeSpecialAreas_36 = format_RegionSchemeSpecialAreas_36.readFeatures(json_RegionSchemeSpecialAreas_36, 
+var format_RSSARegionSchemeSpecialAreas_36 = new ol.format.GeoJSON();
+var features_RSSARegionSchemeSpecialAreas_36 = format_RSSARegionSchemeSpecialAreas_36.readFeatures(json_RSSARegionSchemeSpecialAreas_36, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_RegionSchemeSpecialAreas_36 = new ol.source.Vector({
+var jsonSource_RSSARegionSchemeSpecialAreas_36 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_RegionSchemeSpecialAreas_36.addFeatures(features_RegionSchemeSpecialAreas_36);
-var lyr_RegionSchemeSpecialAreas_36 = new ol.layer.Vector({
+jsonSource_RSSARegionSchemeSpecialAreas_36.addFeatures(features_RSSARegionSchemeSpecialAreas_36);
+var lyr_RSSARegionSchemeSpecialAreas_36 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_RegionSchemeSpecialAreas_36, 
-                style: style_RegionSchemeSpecialAreas_36,
-                popuplayertitle: "Region Scheme Special Areas",
+                source:jsonSource_RSSARegionSchemeSpecialAreas_36, 
+                style: style_RSSARegionSchemeSpecialAreas_36,
+                popuplayertitle: "RSSA - Region Scheme Special Areas",
                 interactive: false,
-                title: '<img src="styles/legend/RegionSchemeSpecialAreas_36.png" /> Region Scheme Special Areas'
+                title: '<img src="styles/legend/RSSARegionSchemeSpecialAreas_36.png" /> RSSA - Region Scheme Special Areas'
             });
-var format_StructurePlanBoundaries_37 = new ol.format.GeoJSON();
-var features_StructurePlanBoundaries_37 = format_StructurePlanBoundaries_37.readFeatures(json_StructurePlanBoundaries_37, 
+var format_MergedLayer_37 = new ol.format.GeoJSON();
+var features_MergedLayer_37 = format_MergedLayer_37.readFeatures(json_MergedLayer_37, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_StructurePlanBoundaries_37 = new ol.source.Vector({
+var jsonSource_MergedLayer_37 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_StructurePlanBoundaries_37.addFeatures(features_StructurePlanBoundaries_37);
-var lyr_StructurePlanBoundaries_37 = new ol.layer.Vector({
+jsonSource_MergedLayer_37.addFeatures(features_MergedLayer_37);
+var lyr_MergedLayer_37 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_StructurePlanBoundaries_37, 
-                style: style_StructurePlanBoundaries_37,
+                source:jsonSource_MergedLayer_37, 
+                style: style_MergedLayer_37,
+                popuplayertitle: "Merged Layer",
+                interactive: false,
+                title: '<img src="styles/legend/MergedLayer_37.png" /> Merged Layer'
+            });
+var format_StructurePlanBoundaries_38 = new ol.format.GeoJSON();
+var features_StructurePlanBoundaries_38 = format_StructurePlanBoundaries_38.readFeatures(json_StructurePlanBoundaries_38, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_StructurePlanBoundaries_38 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_StructurePlanBoundaries_38.addFeatures(features_StructurePlanBoundaries_38);
+var lyr_StructurePlanBoundaries_38 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_StructurePlanBoundaries_38, 
+                style: style_StructurePlanBoundaries_38,
                 popuplayertitle: "Structure Plan Boundaries",
                 interactive: false,
     title: 'Structure Plan Boundaries<br />\
-    <img src="styles/legend/StructurePlanBoundaries_37_0.png" /> District structure plan<br />\
-    <img src="styles/legend/StructurePlanBoundaries_37_1.png" /> Structure plan<br />'
+    <img src="styles/legend/StructurePlanBoundaries_38_0.png" /> District structure plan<br />\
+    <img src="styles/legend/StructurePlanBoundaries_38_1.png" /> Structure plan<br />'
         });
-var format_MurrayLGA_38 = new ol.format.GeoJSON();
-var features_MurrayLGA_38 = format_MurrayLGA_38.readFeatures(json_MurrayLGA_38, 
+var format_FutureGrowthArea_39 = new ol.format.GeoJSON();
+var features_FutureGrowthArea_39 = format_FutureGrowthArea_39.readFeatures(json_FutureGrowthArea_39, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_MurrayLGA_38 = new ol.source.Vector({
+var jsonSource_FutureGrowthArea_39 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_MurrayLGA_38.addFeatures(features_MurrayLGA_38);
-var lyr_MurrayLGA_38 = new ol.layer.Vector({
+jsonSource_FutureGrowthArea_39.addFeatures(features_FutureGrowthArea_39);
+var lyr_FutureGrowthArea_39 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_MurrayLGA_38, 
-                style: style_MurrayLGA_38,
+                source:jsonSource_FutureGrowthArea_39, 
+                style: style_FutureGrowthArea_39,
+                popuplayertitle: "Future Growth Area",
+                interactive: false,
+    title: 'Future Growth Area<br />\
+    <img src="styles/legend/FutureGrowthArea_39_0.png" /> Dwellingup DSP<br />\
+    <img src="styles/legend/FutureGrowthArea_39_1.png" /> Pinjarra DSP Prospected Centre Area<br />\
+    <img src="styles/legend/FutureGrowthArea_39_2.png" /> North Dandalup DSP Propected Centre<br />\
+    <img src="styles/legend/FutureGrowthArea_39_3.png" /> Ravenswood DSP Prospected Centre Area<br />'
+        });
+var lyr_Lot1LakesRdLot2ShannsRdNorthDandalupSP_40 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Lot 1 Lakes Rd & Lot 2 Shanns Rd, North Dandalup SP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/Lot1LakesRdLot2ShannsRdNorthDandalupSP_40.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12904940.177862, -3834343.764208, 12906015.717965, -3831364.794190]
+                            })
+                        });
+var lyr_GreenlandsRoadstructureplan_41 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Greenlands Road structure plan",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/GreenlandsRoadstructureplan_41.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12890788.583487, -3849356.461315, 12894339.639176, -3847976.994952]
+                            })
+                        });
+var lyr_Lot602BeachamRdWestPinjarraLSP_42 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Lot 602 Beacham Rd, West Pinjarra LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/Lot602BeachamRdWestPinjarraLSP_42.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12895587.341033, -3844575.471750, 12896029.102380, -3843526.568385]
+                            })
+                        });
+var lyr_FurnissdaleLot91PaullStreetLot157RonlynRoadLSP_43 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Furnissdale-Lot 91 Paull Street & Lot 157 Ronlyn Road LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/FurnissdaleLot91PaullStreetLot157RonlynRoadLSP_43.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12886648.360710, -3837392.344872, 12887295.088992, -3836899.746459]
+                            })
+                        });
+var lyr_Lots111416123BedingfeldRdPinjarraLSP_44 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Lots 1114, 16 & 123 Bedingfeld Rd, Pinjarra LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/Lots111416123BedingfeldRdPinjarraLSP_44.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12898887.975358, -3847535.116552, 12899347.421535, -3847128.064879]
+                            })
+                        });
+var lyr_Lot9500WisteriaCrsLot304RedgumRdPinjarraLSP_45 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Lot 9500 Wisteria Crs & Lot 304 Redgum Rd, Pinjarra LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/Lot9500WisteriaCrsLot304RedgumRdPinjarraLSP_45.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12900543.399159, -3843059.585976, 12901268.662347, -3842097.726778]
+                            })
+                        });
+var lyr_ThomasStreetPinjarraLSP_46 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Thomas Street Pinjarra LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/ThomasStreetPinjarraLSP_46.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12897027.847162, -3845878.645538, 12897761.357203, -3845168.539190]
+                            })
+                        });
+var lyr_Lots12PinjarraRdWestPinjarraODP_47 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Lots 1 & 2 Pinjarra Rd, West Pinjarra ODP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/Lots12PinjarraRdWestPinjarraODP_47.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12895937.467798, -3844103.602188, 12896635.382482, -3843526.021529]
+                            })
+                        });
+var lyr_Lot51McLartyRoadPinjarraLSP_48 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Lot 51 McLarty Road, Pinjarra LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/Lot51McLartyRoadPinjarraLSP_48.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12898305.133415, -3847534.041613, 12898566.846163, -3847359.721896]
+                            })
+                        });
+var lyr_Lot41HamptonRdPinjarraLSP_49 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Lot 41 Hampton Rd, Pinjarra LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/Lot41HamptonRdPinjarraLSP_49.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12898102.308155, -3847357.735790, 12898364.012976, -3847183.572399]
+                            })
+                        });
+var lyr_KwelRoadLSP_50 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Kwel Road LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/KwelRoadLSP_50.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12897063.343060, -3847925.966526, 12897610.716685, -3847086.514211]
+                            })
+                        });
+var lyr_NorthPinjarraStructurePlan_51 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "North Pinjarra Structure Plan",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/NorthPinjarraStructurePlan_51.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12899702.782702, -3845634.976039, 12901676.108806, -3843029.971816]
+                            })
+                        });
+var lyr_FurnissdaleWestLSP_52 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Furnissdale West LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/FurnissdaleWestLSP_52.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12886392.209895, -3836846.655129, 12887865.015370, -3835241.867800]
+                            })
+                        });
+var lyr_MurrayCountryEstateODP_53 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Murray Country Estate ODP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/MurrayCountryEstateODP_53.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12895596.347060, -3844092.077345, 12899214.932714, -3841171.298614]
+                            })
+                        });
+var lyr_AustinLakesMasterplan_54 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Austin Lakes Masterplan",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/AustinLakesMasterplan_54.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12889267.822748, -3843216.295738, 12892335.267203, -3841611.980852]
+                            })
+                        });
+var lyr_AustinLakesSouthYunderupLSP_55 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Austin Lakes South Yunderup LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/AustinLakesSouthYunderupLSP_55.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12891189.265918, -3842555.623872, 12892336.894736, -3841024.453158]
+                            })
+                        });
+var lyr_RavenswoodEastODP_56 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Ravenswood East ODP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/RavenswoodEastODP_56.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12894681.777551, -3840867.809734, 12896057.093987, -3839137.362806]
+                            })
+                        });
+var lyr_RavenswoodWestODP_57 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Ravenswood West ODP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/RavenswoodWestODP_57.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12893166.761509, -3840119.043294, 12894806.689032, -3838764.290752]
+                            })
+                        });
+var lyr_NorthDandalupTownsiteMap_58 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "North Dandalup Townsite Map",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/NorthDandalupTownsiteMap_58.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12907768.448096, -3833630.168253, 12910355.008562, -3830211.530763]
+                            })
+                        });
+var lyr_PointGreyLSP_59 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Point Grey LSP",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/PointGreyLSP_59.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12875919.001353, -3847530.150350, 12878670.002748, -3844241.667436]
+                            })
+                        });
+var lyr_DwellingupStructurePlanProposed_60 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "Dwellingup Structure Plan Proposed",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/DwellingupStructurePlanProposed_60.png",
+    attributions: ' ',
+                                projection: 'EPSG:3857',
+                                alwaysInRange: true,
+                                imageExtent: [12918828.214834, -3858470.857026, 12921095.425841, -3856430.582286]
+                            })
+                        });
+var format_MurrayLGA_61 = new ol.format.GeoJSON();
+var features_MurrayLGA_61 = format_MurrayLGA_61.readFeatures(json_MurrayLGA_61, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_MurrayLGA_61 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_MurrayLGA_61.addFeatures(features_MurrayLGA_61);
+var lyr_MurrayLGA_61 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_MurrayLGA_61, 
+                style: style_MurrayLGA_61,
                 popuplayertitle: "Murray LGA",
                 interactive: false,
-                title: '<img src="styles/legend/MurrayLGA_38.png" /> Murray LGA'
+                title: '<img src="styles/legend/MurrayLGA_61.png" /> Murray LGA'
             });
-var format_Suburb_39 = new ol.format.GeoJSON();
-var features_Suburb_39 = format_Suburb_39.readFeatures(json_Suburb_39, 
+var format_Suburb_62 = new ol.format.GeoJSON();
+var features_Suburb_62 = format_Suburb_62.readFeatures(json_Suburb_62, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Suburb_39 = new ol.source.Vector({
+var jsonSource_Suburb_62 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Suburb_39.addFeatures(features_Suburb_39);
-var lyr_Suburb_39 = new ol.layer.Vector({
+jsonSource_Suburb_62.addFeatures(features_Suburb_62);
+var lyr_Suburb_62 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_Suburb_39, 
-                style: style_Suburb_39,
+                source:jsonSource_Suburb_62, 
+                style: style_Suburb_62,
                 popuplayertitle: "Suburb",
                 interactive: false,
-                title: '<img src="styles/legend/Suburb_39.png" /> Suburb'
+                title: '<img src="styles/legend/Suburb_62.png" /> Suburb'
             });
-var format_ParcelAttributes_40 = new ol.format.GeoJSON();
-var features_ParcelAttributes_40 = format_ParcelAttributes_40.readFeatures(json_ParcelAttributes_40, 
+var format_ParcelAttributes_63 = new ol.format.GeoJSON();
+var features_ParcelAttributes_63 = format_ParcelAttributes_63.readFeatures(json_ParcelAttributes_63, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_ParcelAttributes_40 = new ol.source.Vector({
+var jsonSource_ParcelAttributes_63 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_ParcelAttributes_40.addFeatures(features_ParcelAttributes_40);
-var lyr_ParcelAttributes_40 = new ol.layer.Vector({
+jsonSource_ParcelAttributes_63.addFeatures(features_ParcelAttributes_63);
+var lyr_ParcelAttributes_63 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_ParcelAttributes_40, 
-                style: style_ParcelAttributes_40,
+                source:jsonSource_ParcelAttributes_63, 
+                style: style_ParcelAttributes_63,
                 popuplayertitle: "Parcel Attributes",
                 interactive: true,
-                title: '<img src="styles/legend/ParcelAttributes_40.png" /> Parcel Attributes'
-            });
+    title: 'Parcel Attributes<br />\
+    <img src="styles/legend/ParcelAttributes_63_0.png" /> Rezone<br />\
+    <img src="styles/legend/ParcelAttributes_63_1.png" /> Zoned<br />'
+        });
 var group_Administrative = new ol.layer.Group({
-                                layers: [lyr_MurrayLGA_38,lyr_Suburb_39,lyr_ParcelAttributes_40,],
+                                layers: [lyr_MurrayLGA_61,lyr_Suburb_62,lyr_ParcelAttributes_63,],
                                 fold: "open",
                                 title: "Administrative"});
+var group_PSP = new ol.layer.Group({
+                                layers: [lyr_Lot1LakesRdLot2ShannsRdNorthDandalupSP_40,lyr_GreenlandsRoadstructureplan_41,lyr_Lot602BeachamRdWestPinjarraLSP_42,lyr_FurnissdaleLot91PaullStreetLot157RonlynRoadLSP_43,lyr_Lots111416123BedingfeldRdPinjarraLSP_44,lyr_Lot9500WisteriaCrsLot304RedgumRdPinjarraLSP_45,lyr_ThomasStreetPinjarraLSP_46,lyr_Lots12PinjarraRdWestPinjarraODP_47,lyr_Lot51McLartyRoadPinjarraLSP_48,lyr_Lot41HamptonRdPinjarraLSP_49,lyr_KwelRoadLSP_50,lyr_NorthPinjarraStructurePlan_51,lyr_FurnissdaleWestLSP_52,lyr_MurrayCountryEstateODP_53,lyr_AustinLakesMasterplan_54,lyr_AustinLakesSouthYunderupLSP_55,lyr_RavenswoodEastODP_56,lyr_RavenswoodWestODP_57,lyr_NorthDandalupTownsiteMap_58,lyr_PointGreyLSP_59,lyr_DwellingupStructurePlanProposed_60,],
+                                fold: "open",
+                                title: "PSP"});
 var group_PSPGrowthAreaBoundary = new ol.layer.Group({
-                                layers: [lyr_StructurePlanBoundaries_37,],
+                                layers: [lyr_StructurePlanBoundaries_38,lyr_FutureGrowthArea_39,],
                                 fold: "open",
                                 title: "PSP / Growth Area Boundary"});
 var group_NDHDeductedOverlays = new ol.layer.Group({
-                                layers: [lyr_Floodway_25,lyr_HHHeritageAgreements_26,lyr_ProtectedAreas_27,lyr_HHAssessmentProgram_28,lyr_HHHeritageArea_29,lyr_HHHeritageList_30,lyr_HHLocalSurvey_31,lyr_HHProtectionOrder_32,lyr_HHStateRegister_33,lyr_WBWaterwaysBuffered_34,lyr_WAPetroleumPipeline_35,lyr_RegionSchemeSpecialAreas_36,],
+                                layers: [lyr_WBWaterwaysBuffered_25,lyr_FWFloodway_26,lyr_HAHeritageAgreements_27,lyr_PAProtectedAreas_28,lyr_APAssessmentProgram_29,lyr_HAHeritageArea_30,lyr_HLHeritageList_31,lyr_LSLocalSurvey_32,lyr_POProtectionOrder_33,lyr_SRStateRegister_34,lyr_WAPPWAPetroleumPipeline_35,lyr_RSSARegionSchemeSpecialAreas_36,lyr_MergedLayer_37,],
                                 fold: "open",
                                 title: "NDH Deducted Overlays"});
 var group_NotetoDD = new ol.layer.Group({
@@ -710,13 +1022,13 @@ var group_Zoning = new ol.layer.Group({
                                 layers: [lyr_LPSZone_2,lyr_RegionSchemeZones_3,lyr_PerthandPeelLandUse_4,],
                                 fold: "open",
                                 title: "Zoning"});
-var group_BaseLayers = new ol.layer.Group({
+var group_BaseLayer = new ol.layer.Group({
                                 layers: [lyr_GoogleMaps_0,lyr_ESRISatelliteArcGISWorld_Imagery_1,],
                                 fold: "open",
-                                title: "Base Layers"});
+                                title: "Base Layer"});
 
-lyr_GoogleMaps_0.setVisible(false);lyr_ESRISatelliteArcGISWorld_Imagery_1.setVisible(true);lyr_LPSZone_2.setVisible(false);lyr_RegionSchemeZones_3.setVisible(false);lyr_PerthandPeelLandUse_4.setVisible(false);lyr_CoastalPlanExtents_5.setVisible(false);lyr_GovernmentSeweragePolicy_6.setVisible(false);lyr_LandsofInterest_7.setVisible(false);lyr_LegislatedLandsandWaters_8.setVisible(false);lyr_PerthandPeelUrbanLandDevelopmentOutlookResidential_9.setVisible(false);lyr_PlanningReferralsContacts_10.setVisible(false);lyr_SPPExclusionAreas_11.setVisible(false);lyr_SPPExtractionSites_12.setVisible(false);lyr_ClearingRegulationsScheduleOneAreas_13.setVisible(false);lyr_10metrecontours_14.setVisible(false);lyr_BushFireProneAreas2021_15.setVisible(false);lyr_AboriginalCulturalHeritageHistoric_16.setVisible(false);lyr_AboriginalCulturalHeritageLodged_17.setVisible(false);lyr_AboriginalCulturalHeritageRegister_18.setVisible(false);lyr_AboriginalCulturalHeritageSurveyAreas_19.setVisible(false);lyr_MiningTenements_20.setVisible(false);lyr_FPMFloodplainArea_21.setVisible(false);lyr_StatePlanningPolicyTransportNoiseCorridor_22.setVisible(false);lyr_Floodfringe_23.setVisible(false);lyr_AcidSulfateSoilRisk_24.setVisible(false);lyr_Floodway_25.setVisible(false);lyr_HHHeritageAgreements_26.setVisible(false);lyr_ProtectedAreas_27.setVisible(false);lyr_HHAssessmentProgram_28.setVisible(false);lyr_HHHeritageArea_29.setVisible(false);lyr_HHHeritageList_30.setVisible(false);lyr_HHLocalSurvey_31.setVisible(false);lyr_HHProtectionOrder_32.setVisible(false);lyr_HHStateRegister_33.setVisible(false);lyr_WBWaterwaysBuffered_34.setVisible(false);lyr_WAPetroleumPipeline_35.setVisible(false);lyr_RegionSchemeSpecialAreas_36.setVisible(false);lyr_StructurePlanBoundaries_37.setVisible(false);lyr_MurrayLGA_38.setVisible(true);lyr_Suburb_39.setVisible(true);lyr_ParcelAttributes_40.setVisible(true);
-var layersList = [group_BaseLayers,group_Zoning,group_OtherOverlays,group_NotetoDD,group_NDHDeductedOverlays,group_PSPGrowthAreaBoundary,group_Administrative];
+lyr_GoogleMaps_0.setVisible(false);lyr_ESRISatelliteArcGISWorld_Imagery_1.setVisible(true);lyr_LPSZone_2.setVisible(false);lyr_RegionSchemeZones_3.setVisible(false);lyr_PerthandPeelLandUse_4.setVisible(false);lyr_CoastalPlanExtents_5.setVisible(false);lyr_GovernmentSeweragePolicy_6.setVisible(false);lyr_LandsofInterest_7.setVisible(false);lyr_LegislatedLandsandWaters_8.setVisible(false);lyr_PerthandPeelUrbanLandDevelopmentOutlookResidential_9.setVisible(false);lyr_PlanningReferralsContacts_10.setVisible(false);lyr_SPPExclusionAreas_11.setVisible(false);lyr_SPPExtractionSites_12.setVisible(false);lyr_ClearingRegulationsScheduleOneAreas_13.setVisible(false);lyr_10metrecontours_14.setVisible(false);lyr_BushFireProneAreas2021_15.setVisible(false);lyr_AboriginalCulturalHeritageHistoric_16.setVisible(false);lyr_AboriginalCulturalHeritageLodged_17.setVisible(false);lyr_AboriginalCulturalHeritageRegister_18.setVisible(false);lyr_AboriginalCulturalHeritageSurveyAreas_19.setVisible(false);lyr_MiningTenements_20.setVisible(false);lyr_FPMFloodplainArea_21.setVisible(false);lyr_StatePlanningPolicyTransportNoiseCorridor_22.setVisible(false);lyr_Floodfringe_23.setVisible(false);lyr_AcidSulfateSoilRisk_24.setVisible(false);lyr_WBWaterwaysBuffered_25.setVisible(false);lyr_FWFloodway_26.setVisible(false);lyr_HAHeritageAgreements_27.setVisible(false);lyr_PAProtectedAreas_28.setVisible(false);lyr_APAssessmentProgram_29.setVisible(false);lyr_HAHeritageArea_30.setVisible(false);lyr_HLHeritageList_31.setVisible(false);lyr_LSLocalSurvey_32.setVisible(false);lyr_POProtectionOrder_33.setVisible(false);lyr_SRStateRegister_34.setVisible(false);lyr_WAPPWAPetroleumPipeline_35.setVisible(false);lyr_RSSARegionSchemeSpecialAreas_36.setVisible(false);lyr_MergedLayer_37.setVisible(false);lyr_StructurePlanBoundaries_38.setVisible(false);lyr_FutureGrowthArea_39.setVisible(true);lyr_Lot1LakesRdLot2ShannsRdNorthDandalupSP_40.setVisible(false);lyr_GreenlandsRoadstructureplan_41.setVisible(false);lyr_Lot602BeachamRdWestPinjarraLSP_42.setVisible(false);lyr_FurnissdaleLot91PaullStreetLot157RonlynRoadLSP_43.setVisible(false);lyr_Lots111416123BedingfeldRdPinjarraLSP_44.setVisible(false);lyr_Lot9500WisteriaCrsLot304RedgumRdPinjarraLSP_45.setVisible(false);lyr_ThomasStreetPinjarraLSP_46.setVisible(false);lyr_Lots12PinjarraRdWestPinjarraODP_47.setVisible(false);lyr_Lot51McLartyRoadPinjarraLSP_48.setVisible(false);lyr_Lot41HamptonRdPinjarraLSP_49.setVisible(false);lyr_KwelRoadLSP_50.setVisible(false);lyr_NorthPinjarraStructurePlan_51.setVisible(false);lyr_FurnissdaleWestLSP_52.setVisible(false);lyr_MurrayCountryEstateODP_53.setVisible(false);lyr_AustinLakesMasterplan_54.setVisible(false);lyr_AustinLakesSouthYunderupLSP_55.setVisible(false);lyr_RavenswoodEastODP_56.setVisible(false);lyr_RavenswoodWestODP_57.setVisible(false);lyr_NorthDandalupTownsiteMap_58.setVisible(false);lyr_PointGreyLSP_59.setVisible(false);lyr_DwellingupStructurePlanProposed_60.setVisible(false);lyr_MurrayLGA_61.setVisible(true);lyr_Suburb_62.setVisible(true);lyr_ParcelAttributes_63.setVisible(true);
+var layersList = [group_BaseLayer,group_Zoning,group_OtherOverlays,group_NotetoDD,group_NDHDeductedOverlays,group_PSPGrowthAreaBoundary,group_PSP,group_Administrative];
 lyr_LPSZone_2.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'zone_numbe': 'Zone number', 'zone': 'Zone', 'add_label': 'Additional use label', 'rest_label': 'Restricted use label', 'specadd_la': 'Special additional use label', 'special_la': 'Special label', 'label': 'Label', 'label_desc': 'Label description', 'gazettal_d': 'Gazettal date', 'scheme_nam': 'Scheme name', 'lga': 'LGA', 'scheme_no': 'Scheme number', });
 lyr_RegionSchemeZones_3.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'rs_code': 'Region scheme code', 'descriptio': 'Description', 'label': 'Label', 'rs_class': 'Zone or Reserve', 'reg_scheme': 'Region scheme', });
 lyr_PerthandPeelLandUse_4.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', 'description': 'description', 'timestamp': 'timestamp', 'begin': 'begin', 'end': 'end', 'altitudeMode': 'altitudeMode', 'tessellate': 'tessellate', 'extrude': 'extrude', 'visibility': 'visibility', 'drawOrder': 'drawOrder', 'icon': 'icon', 'OBJECTID': 'OBJECTID', 'LUGROUP': 'LUGROUP', 'LUTYPE': 'LUTYPE', 'LUSUBTYPE': 'LUSUBTYPE', 'SP_TITLE': 'SP_TITLE', 'SUBREGION': 'SUBREGION', 'LABEL': 'LABEL', 'STAGING': 'STAGING', 'STAGINGSCH': 'STAGINGSCH', 'CHANGETOFR': 'CHANGETOFR', 'FRAMEWORKL': 'FRAMEWORKL', 'DESCRIPTIO': 'DESCRIPTIO', 'COMMENT_': 'COMMENT_', 'ADDITIONAL': 'ADDITIONAL', 'SOURCE': 'SOURCE', 'REF_NO': 'REF_NO', 'TYPOLOGY': 'TYPOLOGY', 'CODE': 'CODE', 'CLASSOFACT': 'CLASSOFACT', 'COACOMMENT': 'COACOMMENT', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', 'layer': 'layer', 'path': 'path', });
@@ -740,23 +1052,24 @@ lyr_FPMFloodplainArea_21.set('fieldAliases', {'fid': 'fid', 'objectid': 'objecti
 lyr_StatePlanningPolicyTransportNoiseCorridor_22.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'layer': 'layer', 'feature_ty': 'feature_ty', 'feature_na': 'feature_na', 'label': 'label', 'policy_num': 'policy_num', });
 lyr_Floodfringe_23.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'ext_type': 'ext_type', 'status': 'status', 'start_date': 'start_date', 'location': 'location', 'vert_datum': 'vert_datum', 'date_check': 'date_check', 'source': 'source', 'comments': 'comments', 'ufi': 'ufi', 'crt_date': 'crt_date', 'src_date': 'src_date', 'edit_by': 'edit_by', 'auth_by': 'auth_by', 'cap_meth': 'cap_meth', 'cap_scale': 'cap_scale', 'online': 'online', });
 lyr_AcidSulfateSoilRisk_24.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'createdate': 'Creation Date', 'capture': 'Capture Method', 'riskclass': 'Risk Class', 'risk_categ': 'risk_categ', 'natcode': 'Nat.Code', });
-lyr_Floodway_25.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'ext_type': 'ext_type', 'status': 'status', 'start_date': 'start_date', 'location': 'location', 'vert_datum': 'vert_datum', 'date_check': 'date_check', 'source': 'source', 'comments': 'comments', 'ufi': 'ufi', 'crt_date': 'crt_date', 'src_date': 'src_date', 'edit_by': 'edit_by', 'auth_by': 'auth_by', 'cap_meth': 'cap_meth', 'cap_scale': 'cap_scale', 'online': 'online', });
-lyr_HHHeritageAgreements_26.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
-lyr_ProtectedAreas_27.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'id': 'id', 'protecteda': 'protecteda', 'place_name': 'place_name', 'gazette_da': 'gazette_da', 'conditions': 'conditions', 'st_area(sh': 'st_area(sh', 'st_perimet': 'st_perimet', });
-lyr_HHAssessmentProgram_28.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
-lyr_HHHeritageArea_29.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'more_info': 'more_info', 'shape_leng': 'shape_leng', 'st_area(sh': 'st_area(sh', 'st_perimet': 'st_perimet', });
-lyr_HHHeritageList_30.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'more_info': 'more_info', 'shape_leng': 'shape_leng', 'st_area(sh': 'st_area(sh', 'st_perimet': 'st_perimet', });
-lyr_HHLocalSurvey_31.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
-lyr_HHProtectionOrder_32.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
-lyr_HHStateRegister_33.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
-lyr_WBWaterwaysBuffered_34.set('fieldAliases', {'fid': 'fid', 'DN': 'DN', });
-lyr_WAPetroleumPipeline_35.set('fieldAliases', {'oid': 'oid', 'gid': 'gid', 'title_id': 'title_id', 'type': 'type', 'issued': 'issued', 'expiry': 'expiry', 'status': 'status', 'act_abbrev': 'act_abbrev', 'coverage': 'coverage', 'holder_1': 'holder_1', 'holder_2': 'holder_2', 'holder_3': 'holder_3', 'holder_4': 'holder_4', 'holder_5': 'holder_5', 'holder_6': 'holder_6', 'holder_7': 'holder_7', 'holder_8': 'holder_8', 'purpose': 'purpose', 'name': 'name', 'start_poin': 'start_poin', 'end_point': 'end_point', 'built': 'built', 'extract_da': 'extract_da', 'st_area(th': 'st_area(th', 'st_perimet': 'st_perimet', });
-lyr_RegionSchemeSpecialAreas_36.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'rs_code': 'rs_code', 'descriptio': 'descriptio', 'site_no': 'site_no', 'label': 'label', 'reg_scheme': 'reg_scheme', });
-lyr_StructurePlanBoundaries_37.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'filenumber': 'filenumber', 'alt_title': 'alt_title', 'status': 'status', 'endorsed_d': 'endorsed_d', 'sp_area_ha': 'sp_area_ha', 'type': 'type', });
-lyr_MurrayLGA_38.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'boundary_i': 'boundary_i', 'type_code': 'type_code', 'type_descr': 'type_descr', 'feature_nu': 'feature_nu', 'name': 'name', 'abs_lga_nu': 'abs_lga_nu', 'postcode': 'postcode', 'land_area': 'land_area', 'area_deriv': 'area_deriv', });
-lyr_Suburb_39.set('fieldAliases', {'fid': 'fid', 'LC_PLY_PID': 'LC_PLY_PID', 'LOC_PID': 'LOC_PID', 'DT_CREATE': 'DT_CREATE', 'LOC_NAME': 'LOC_NAME', 'LOC_CLASS': 'LOC_CLASS', 'STATE': 'STATE', });
-lyr_ParcelAttributes_40.set('fieldAliases', {'fid': 'fid', 'object_id': 'object_id', 'Unique ID': 'Unique ID', 'Suburb': 'Suburb', 'PARCEL': 'PARCEL', 'Address': 'Address', 'Zoned / Rezone': 'Zoned / Rezone', 'Zoning': 'Zoning', 'Strategy': 'Strategy', 'Strat Link': 'Strat Link', 'Overlays': 'Overlays', 'Gross HA': 'Gross HA', 'NDH': 'NDH', 'Lot Yield @ 20dw/HA (450m2)': 'Lot Yield @ 20dw/HA (450m2)', 'VALUE @ 450m2': 'VALUE @ 450m2', 'Value @ 20%DM': 'Value @ 20%DM', 'Current RLP': 'Current RLP', 'Current OPC': 'Current OPC', 'Value @ 10%DM': 'Value @ 10%DM', 'Value @ 12%DM': 'Value @ 12%DM', 'Value @ 15%DM': 'Value @ 15%DM', 'Value @ 25%DM': 'Value @ 25%DM', 'Value @ 30%DM': 'Value @ 30%DM', 'OWNERSHIP': 'OWNERSHIP', 'Estate Status': 'Estate Status', 'Developer': 'Developer', 'Vendor Company': 'Vendor Company', 'Vendor Names': 'Vendor Names', 
-    'Vendor Address': 'Vendor Address', 'Vendor Mobile': 'Vendor Mobile', 'Vendor Email': 'Vendor Email', 'Email Lead Link': 'Email Lead Link', 'location_address': 'location_address', });
+lyr_WBWaterwaysBuffered_25.set('fieldAliases', {'fid': 'fid', 'DN': 'DN', });
+lyr_FWFloodway_26.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'ext_type': 'ext_type', 'status': 'status', 'start_date': 'start_date', 'location': 'location', 'vert_datum': 'vert_datum', 'date_check': 'date_check', 'source': 'source', 'comments': 'comments', 'ufi': 'ufi', 'crt_date': 'crt_date', 'src_date': 'src_date', 'edit_by': 'edit_by', 'auth_by': 'auth_by', 'cap_meth': 'cap_meth', 'cap_scale': 'cap_scale', 'online': 'online', });
+lyr_HAHeritageAgreements_27.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
+lyr_PAProtectedAreas_28.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'id': 'id', 'protecteda': 'protecteda', 'place_name': 'place_name', 'gazette_da': 'gazette_da', 'conditions': 'conditions', 'st_area(sh': 'st_area(sh', 'st_perimet': 'st_perimet', });
+lyr_APAssessmentProgram_29.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
+lyr_HAHeritageArea_30.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'more_info': 'more_info', 'shape_leng': 'shape_leng', 'st_area(sh': 'st_area(sh', 'st_perimet': 'st_perimet', });
+lyr_HLHeritageList_31.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'more_info': 'more_info', 'shape_leng': 'shape_leng', 'st_area(sh': 'st_area(sh', 'st_perimet': 'st_perimet', });
+lyr_LSLocalSurvey_32.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
+lyr_POProtectionOrder_33.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
+lyr_SRStateRegister_34.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'place_no': 'place_no', 'place_name': 'place_name', 'location': 'location', 'lga': 'lga', 'her_record': 'her_record', 'date_modif': 'date_modif', 'cluster': 'cluster', 'more_info': 'more_info', });
+lyr_WAPPWAPetroleumPipeline_35.set('fieldAliases', {'oid': 'oid', 'gid': 'gid', 'title_id': 'title_id', 'type': 'type', 'issued': 'issued', 'expiry': 'expiry', 'status': 'status', 'act_abbrev': 'act_abbrev', 'coverage': 'coverage', 'holder_1': 'holder_1', 'holder_2': 'holder_2', 'holder_3': 'holder_3', 'holder_4': 'holder_4', 'holder_5': 'holder_5', 'holder_6': 'holder_6', 'holder_7': 'holder_7', 'holder_8': 'holder_8', 'purpose': 'purpose', 'name': 'name', 'start_poin': 'start_poin', 'end_point': 'end_point', 'built': 'built', 'extract_da': 'extract_da', 'st_area(th': 'st_area(th', 'st_perimet': 'st_perimet', });
+lyr_RSSARegionSchemeSpecialAreas_36.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'rs_code': 'rs_code', 'descriptio': 'descriptio', 'site_no': 'site_no', 'label': 'label', 'reg_scheme': 'reg_scheme', });
+lyr_MergedLayer_37.set('fieldAliases', {'LayerName': 'LayerName', 'layer': 'layer', 'path': 'path', });
+lyr_StructurePlanBoundaries_38.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'filenumber': 'filenumber', 'alt_title': 'alt_title', 'status': 'status', 'endorsed_d': 'endorsed_d', 'sp_area_ha': 'sp_area_ha', 'type': 'type', });
+lyr_FutureGrowthArea_39.set('fieldAliases', {'fid': 'fid', 'id': 'id', 'Centre': 'Centre', });
+lyr_MurrayLGA_61.set('fieldAliases', {'fid': 'fid', 'objectid': 'objectid', 'boundary_i': 'boundary_i', 'type_code': 'type_code', 'type_descr': 'type_descr', 'feature_nu': 'feature_nu', 'name': 'name', 'abs_lga_nu': 'abs_lga_nu', 'postcode': 'postcode', 'land_area': 'land_area', 'area_deriv': 'area_deriv', });
+lyr_Suburb_62.set('fieldAliases', {'fid': 'fid', 'SAL_CODE21': 'SAL_CODE21', 'SAL_NAME21': 'SAL_NAME21', 'STE_CODE21': 'STE_CODE21', 'STE_NAME21': 'STE_NAME21', 'AUS_CODE21': 'AUS_CODE21', 'AUS_NAME21': 'AUS_NAME21', 'AREASQKM21': 'AREASQKM21', 'LOCI_URI21': 'LOCI_URI21', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', });
+lyr_ParcelAttributes_63.set('fieldAliases', {'fid': 'fid', 'polygon_number': 'polygon_number', 'usage_description': 'usage_description', 'land_id': 'land_id', 'survey_label_text': 'survey_label_text', 'OBJECTID': 'OBJECTID', 'Suburb': 'Suburb', 'PARCEL': 'PARCEL', 'Address': 'Address', 'Zoned / Rezone': 'Zoned / Rezone', 'Current Zone': 'Current Zone', 'Strategy': 'Strategy', 'Strat Link': 'Strat Link', 'Overlays': 'Overlays', 'Gross HA': 'Gross HA', 'NDH': 'NDH', 'Lot Yield @ 20dw/HA (450m2)': 'Lot Yield @ 20dw/HA (450m2)', 'VALUE @ 450m2': 'VALUE @ 450m2', 'Market Value (20%DM)': 'Market Value (20%DM)', 'Current RLP': 'Current RLP', 'Current OPC': 'Current OPC', 'Market Value (30%DM)': 'Market Value (30%DM)', 'Market Value (25%DM)': 'Market Value (25%DM)', 'Market Value (15%DM)': 'Market Value (15%DM)', 'Market Value (12%DM)': 'Market Value (12%DM)', 'Market Value (10%DM)': 'Market Value (10%DM)', 'OWNERSHIP': 'OWNERSHIP', 'Estate Status': 'Estate Status', 'Developer': 'Developer', 'Vendor Company': 'Vendor Company', 'Vendor Names': 'Vendor Names', 'Vendor Addresses': 'Vendor Addresses', 'Vendor Mobiles': 'Vendor Mobiles', 'Vendor Emails': 'Vendor Emails', 'Lead Link': 'Lead Link', 'Lot Plan Identifier': 'Lot Plan Identifier', });
 lyr_LPSZone_2.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'zone_numbe': 'TextEdit', 'zone': 'TextEdit', 'add_label': 'TextEdit', 'rest_label': 'TextEdit', 'specadd_la': 'TextEdit', 'special_la': 'TextEdit', 'label': 'TextEdit', 'label_desc': 'TextEdit', 'gazettal_d': 'DateTime', 'scheme_nam': 'TextEdit', 'lga': 'TextEdit', 'scheme_no': 'TextEdit', });
 lyr_RegionSchemeZones_3.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'rs_code': 'TextEdit', 'descriptio': 'TextEdit', 'label': 'TextEdit', 'rs_class': 'TextEdit', 'reg_scheme': 'TextEdit', });
 lyr_PerthandPeelLandUse_4.set('fieldImages', {'fid': 'TextEdit', 'Name': 'TextEdit', 'description': 'TextEdit', 'timestamp': 'DateTime', 'begin': 'DateTime', 'end': 'DateTime', 'altitudeMode': 'TextEdit', 'tessellate': 'Range', 'extrude': 'Range', 'visibility': 'Range', 'drawOrder': 'Range', 'icon': 'TextEdit', 'OBJECTID': 'TextEdit', 'LUGROUP': 'TextEdit', 'LUTYPE': 'TextEdit', 'LUSUBTYPE': 'TextEdit', 'SP_TITLE': 'TextEdit', 'SUBREGION': 'TextEdit', 'LABEL': 'TextEdit', 'STAGING': 'TextEdit', 'STAGINGSCH': 'TextEdit', 'CHANGETOFR': 'TextEdit', 'FRAMEWORKL': 'TextEdit', 'DESCRIPTIO': 'TextEdit', 'COMMENT_': 'TextEdit', 'ADDITIONAL': 'TextEdit', 'SOURCE': 'TextEdit', 'REF_NO': 'TextEdit', 'TYPOLOGY': 'TextEdit', 'CODE': 'TextEdit', 'CLASSOFACT': 'TextEdit', 'COACOMMENT': 'TextEdit', 'SHAPE_Leng': 'TextEdit', 'SHAPE_Area': 'TextEdit', 'layer': 'TextEdit', 'path': 'TextEdit', });
@@ -780,63 +1093,65 @@ lyr_FPMFloodplainArea_21.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'Tex
 lyr_StatePlanningPolicyTransportNoiseCorridor_22.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'layer': 'TextEdit', 'feature_ty': 'TextEdit', 'feature_na': 'TextEdit', 'label': 'TextEdit', 'policy_num': 'TextEdit', });
 lyr_Floodfringe_23.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'ext_type': 'TextEdit', 'status': 'TextEdit', 'start_date': 'TextEdit', 'location': 'TextEdit', 'vert_datum': 'TextEdit', 'date_check': 'TextEdit', 'source': 'TextEdit', 'comments': 'TextEdit', 'ufi': 'TextEdit', 'crt_date': 'TextEdit', 'src_date': 'TextEdit', 'edit_by': 'TextEdit', 'auth_by': 'TextEdit', 'cap_meth': 'TextEdit', 'cap_scale': 'TextEdit', 'online': 'TextEdit', });
 lyr_AcidSulfateSoilRisk_24.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'createdate': 'TextEdit', 'capture': 'TextEdit', 'riskclass': 'TextEdit', 'risk_categ': 'TextEdit', 'natcode': 'TextEdit', });
-lyr_Floodway_25.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'ext_type': 'TextEdit', 'status': 'TextEdit', 'start_date': 'TextEdit', 'location': 'TextEdit', 'vert_datum': 'TextEdit', 'date_check': 'TextEdit', 'source': 'TextEdit', 'comments': 'TextEdit', 'ufi': 'TextEdit', 'crt_date': 'TextEdit', 'src_date': 'TextEdit', 'edit_by': 'TextEdit', 'auth_by': 'TextEdit', 'cap_meth': 'TextEdit', 'cap_scale': 'TextEdit', 'online': 'TextEdit', });
-lyr_HHHeritageAgreements_26.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
-lyr_ProtectedAreas_27.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'id': 'TextEdit', 'protecteda': 'TextEdit', 'place_name': 'TextEdit', 'gazette_da': 'TextEdit', 'conditions': 'TextEdit', 'st_area(sh': 'TextEdit', 'st_perimet': 'TextEdit', });
-lyr_HHAssessmentProgram_28.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
-lyr_HHHeritageArea_29.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'more_info': 'TextEdit', 'shape_leng': 'TextEdit', 'st_area(sh': 'TextEdit', 'st_perimet': 'TextEdit', });
-lyr_HHHeritageList_30.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'more_info': 'TextEdit', 'shape_leng': 'TextEdit', 'st_area(sh': 'TextEdit', 'st_perimet': 'TextEdit', });
-lyr_HHLocalSurvey_31.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
-lyr_HHProtectionOrder_32.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
-lyr_HHStateRegister_33.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
-lyr_WBWaterwaysBuffered_34.set('fieldImages', {'fid': 'TextEdit', 'DN': 'Range', });
-lyr_WAPetroleumPipeline_35.set('fieldImages', {'oid': 'TextEdit', 'gid': 'TextEdit', 'title_id': 'TextEdit', 'type': 'TextEdit', 'issued': 'TextEdit', 'expiry': 'TextEdit', 'status': 'TextEdit', 'act_abbrev': 'TextEdit', 'coverage': 'TextEdit', 'holder_1': 'TextEdit', 'holder_2': 'TextEdit', 'holder_3': 'TextEdit', 'holder_4': 'TextEdit', 'holder_5': 'TextEdit', 'holder_6': 'TextEdit', 'holder_7': 'TextEdit', 'holder_8': 'TextEdit', 'purpose': 'TextEdit', 'name': 'TextEdit', 'start_poin': 'TextEdit', 'end_point': 'TextEdit', 'built': 'TextEdit', 'extract_da': 'TextEdit', 'st_area(th': 'TextEdit', 'st_perimet': 'TextEdit', });
-lyr_RegionSchemeSpecialAreas_36.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'rs_code': 'TextEdit', 'descriptio': 'TextEdit', 'site_no': 'TextEdit', 'label': 'TextEdit', 'reg_scheme': 'TextEdit', });
-lyr_StructurePlanBoundaries_37.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'filenumber': 'TextEdit', 'alt_title': 'TextEdit', 'status': 'TextEdit', 'endorsed_d': 'DateTime', 'sp_area_ha': 'TextEdit', 'type': 'TextEdit', });
-lyr_MurrayLGA_38.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'boundary_i': 'TextEdit', 'type_code': 'TextEdit', 'type_descr': 'TextEdit', 'feature_nu': 'TextEdit', 'name': 'TextEdit', 'abs_lga_nu': 'TextEdit', 'postcode': 'TextEdit', 'land_area': 'TextEdit', 'area_deriv': 'TextEdit', });
-lyr_Suburb_39.set('fieldImages', {'fid': 'TextEdit', 'LC_PLY_PID': 'TextEdit', 'LOC_PID': 'TextEdit', 'DT_CREATE': 'DateTime', 'LOC_NAME': 'TextEdit', 'LOC_CLASS': 'TextEdit', 'STATE': 'TextEdit', });
-lyr_ParcelAttributes_40.set('fieldImages', {'fid': 'TextEdit', 'object_id': 'TextEdit', 'Unique ID': 'Range', 'Suburb': 'TextEdit', 'PARCEL': 'TextEdit', 'Address': 'TextEdit', 'Zoned / Rezone': 'TextEdit', 'Zoning': 'TextEdit', 'Strategy': 'TextEdit', 'Strat Link': 'TextEdit', 'Overlays': 'TextEdit', 'Gross HA': 'TextEdit', 'NDH': 'TextEdit', 'Lot Yield @ 20dw/HA (450m2)': 'TextEdit', 'VALUE @ 450m2': 'TextEdit', 'Value @ 20%DM': 'TextEdit', 'Current RLP': 'TextEdit', 'Current OPC': 'TextEdit', 'Value @ 10%DM': 'TextEdit', 'Value @ 12%DM': 'TextEdit', 'Value @ 15%DM': 'TextEdit', 'Value @ 25%DM': 'TextEdit', 'Value @ 30%DM': 'TextEdit', 'OWNERSHIP': 'TextEdit', 'Estate Status': 'TextEdit', 'Developer': 'TextEdit', 'Vendor Company': 'TextEdit', 'Vendor Names': 'TextEdit', 
-    'Vendor Address': 'TextEdit', 'Vendor Mobile': 'TextEdit', 'Vendor Email': 'TextEdit', 'Email Lead Link': 'TextEdit', 'location_address': 'TextEdit', });
-lyr_LPSZone_2.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'zone_numbe': 'hidden field', 'zone': 'inline label - always visible', 'add_label': 'hidden field', 'rest_label': 'hidden field', 'specadd_la': 'hidden field', 'special_la': 'hidden field', 'label': 'hidden field', 'label_desc': 'hidden field', 'gazettal_d': 'hidden field', 'scheme_nam': 'hidden field', 'lga': 'hidden field', 'scheme_no': 'hidden field', });
-lyr_RegionSchemeZones_3.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'rs_code': 'hidden field', 'descriptio': 'inline label - always visible', 'label': 'hidden field', 'rs_class': 'hidden field', 'reg_scheme': 'hidden field', });
-lyr_PerthandPeelLandUse_4.set('fieldLabels', {'fid': 'hidden field', 'Name': 'hidden field', 'description': 'inline label - always visible', 'timestamp': 'hidden field', 'begin': 'hidden field', 'end': 'hidden field', 'altitudeMode': 'hidden field', 'tessellate': 'hidden field', 'extrude': 'hidden field', 'visibility': 'hidden field', 'drawOrder': 'hidden field', 'icon': 'hidden field', 'OBJECTID': 'hidden field', 'LUGROUP': 'hidden field', 'LUTYPE': 'hidden field', 'LUSUBTYPE': 'hidden field', 'SP_TITLE': 'hidden field', 'SUBREGION': 'hidden field', 'LABEL': 'hidden field', 'STAGING': 'hidden field', 'STAGINGSCH': 'hidden field', 'CHANGETOFR': 'hidden field', 'FRAMEWORKL': 'hidden field', 'DESCRIPTIO': 'hidden field', 'COMMENT_': 'hidden field', 'ADDITIONAL': 'hidden field', 'SOURCE': 'hidden field', 'REF_NO': 'hidden field', 'TYPOLOGY': 'hidden field', 'CODE': 'hidden field', 'CLASSOFACT': 'hidden field', 'COACOMMENT': 'hidden field', 'SHAPE_Leng': 'hidden field', 'SHAPE_Area': 'hidden field', 'layer': 'hidden field', 'path': 'hidden field', });
-lyr_CoastalPlanExtents_5.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'planid': 'no label', 'plan_name': 'no label', 'plan_title': 'no label', 'plan_date': 'no label', 'plan_type': 'no label', 'author': 'no label', 'summary': 'no label', 'status': 'no label', 'study_area': 'no label', 'region': 'no label', 'comments': 'no label', });
-lyr_GovernmentSeweragePolicy_6.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'layer': 'no label', 'feature_ty': 'no label', 'feature_na': 'no label', 'label': 'no label', 'policy_num': 'no label', });
-lyr_LandsofInterest_7.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'loi_pin': 'no label', 'loi_poly_a': 'no label', 'loi_identi': 'no label', 'loi_regno': 'no label', 'loi_tenure': 'no label', 'loi_act': 'no label', 'loi_catego': 'no label', 'loi_notes': 'no label', 'loi_prprie': 'no label', });
-lyr_LegislatedLandsandWaters_8.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'leg_pin': 'no label', 'leg_poly_a': 'no label', 'leg_class': 'no label', 'leg_identi': 'no label', 'leg_purpos': 'no label', 'leg_vestin': 'no label', 'leg_name': 'no label', 'leg_name_s': 'no label', 'leg_iucn': 'no label', 'leg_tenure': 'no label', 'leg_act': 'no label', 'leg_catego': 'no label', 'leg_notes': 'no label', 'leg_agreem': 'no label', 'leg_classi': 'no label', 'leg_regno': 'no label', });
-lyr_PerthandPeelUrbanLandDevelopmentOutlookResidential_9.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'project_id': 'hidden field', 'lga': 'hidden field', 'suburb': 'hidden field', 'estate_nam': 'hidden field', 'dev_type': 'hidden field', 'staging': 'inline label - visible with data', 'plus_10yrs': 'hidden field', 'zero_5yrs': 'hidden field', 'six_10yrs': 'hidden field', 'com_floors': 'hidden field', });
-lyr_PlanningReferralsContacts_10.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'prc_referr': 'no label', 'prc_contac': 'no label', 'prc_postal': 'no label', 'prc_teleph': 'no label', 'prc_fax_nu': 'no label', 'prc_email': 'no label', 'st_perimet': 'no label', });
-lyr_SPPExclusionAreas_11.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'status': 'no label', 'extract_da': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_SPPExtractionSites_12.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'status': 'no label', 'extract_da': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_ClearingRegulationsScheduleOneAreas_13.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'schedule1_': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_10metrecontours_14.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'id': 'no label', 'elevation': 'no label', });
-lyr_BushFireProneAreas2021_15.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'lga': 'no label', 'designatio': 'no label', 'type': 'no label', 'designat_1': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_AboriginalCulturalHeritageHistoric_16.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'ach_identi': 'no label', 'name': 'no label', 'place_stat': 'no label', 'place_type': 'no label', 'region': 'no label', 'culturally': 'no label', 'cultural_1': 'no label', 'restricted': 'no label', 'boundary_r': 'no label', 'knowledge_': 'no label', 'legacy_id': 'no label', 'boundary_l': 'no label', 'objectid': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_AboriginalCulturalHeritageLodged_17.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'ach_identi': 'no label', 'name': 'no label', 'place_stat': 'no label', 'place_type': 'no label', 'region': 'no label', 'culturally': 'no label', 'cultural_1': 'no label', 'restricted': 'no label', 'boundary_r': 'no label', 'knowledge_': 'no label', 'legacy_id': 'no label', 'boundary_l': 'no label', 'objectid': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_AboriginalCulturalHeritageRegister_18.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'ach_identi': 'no label', 'name': 'no label', 'place_stat': 'no label', 'place_type': 'no label', 'region': 'no label', 'culturally': 'no label', 'cultural_1': 'no label', 'restricted': 'no label', 'boundary_r': 'no label', 'knowledge_': 'no label', 'legacy_id': 'no label', 'boundary_l': 'no label', 'objectid': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_AboriginalCulturalHeritageSurveyAreas_19.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'survey_rep': 'no label', 'survey_r_1': 'no label', 'survey_are': 'no label', 'survey_a_1': 'no label', 'legacy_are': 'no label', 'report_tit': 'no label', 'report_aut': 'no label', 'area_descr': 'no label', 'survey_typ': 'no label', 'spatial_ac': 'no label', 'field_surv': 'no label', 'desktop_su': 'no label', 'boundary_l': 'no label', });
-lyr_MiningTenements_20.set('fieldLabels', {'fid': 'no label', 'oid': 'no label', 'gid': 'no label', 'tenid': 'no label', 'type': 'no label', 'survstatus': 'no label', 'tenstatus': 'no label', 'holdercnt': 'no label', 'holder1': 'no label', 'addr1': 'no label', 'holder2': 'no label', 'addr2': 'no label', 'holder3': 'no label', 'addr3': 'no label', 'holder4': 'no label', 'addr4': 'no label', 'holder5': 'no label', 'addr5': 'no label', 'holder6': 'no label', 'addr6': 'no label', 'holder7': 'no label', 'addr7': 'no label', 'holder8': 'no label', 'addr8': 'no label', 'holder9': 'no label', 'addr9': 'no label', 'fmt_tenid': 'no label', 'legal_area': 'no label', 'unit_of_me': 'no label', 'special_in': 'no label', 'extract_da': 'no label', 'grantdate': 'no label', 'granttime': 'no label', 'startdate': 'no label', 'starttime': 'no label', 'enddate': 'no label', 'endtime': 'no label', 'st_area(th': 'no label', 'st_perimet': 'no label', });
-lyr_FPMFloodplainArea_21.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'ext_type': 'no label', 'status': 'no label', 'start_date': 'no label', 'location': 'no label', 'vert_datum': 'no label', 'date_check': 'no label', 'source': 'no label', 'comments': 'no label', 'ufi': 'no label', 'crt_date': 'no label', 'src_date': 'no label', 'edit_by': 'no label', 'auth_by': 'no label', 'cap_meth': 'no label', 'cap_scale': 'no label', 'hyd_name': 'no label', 'basin_no': 'no label', 'basin_name': 'no label', 'p_site_id': 'no label', 'p_site_nam': 'no label', 'p_stage_le': 'no label', 'p_ahd_conv': 'no label', 'p_telemetr': 'no label', 's_site_id': 'no label', 's_site_nam': 'no label', 's_stage_le': 'no label', 's_ahd_conv': 'no label', 's_telemetr': 'no label', 'fwa_no': 'no label', 'fwa_name': 'no label', 'online': 'no label', });
-lyr_StatePlanningPolicyTransportNoiseCorridor_22.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'layer': 'no label', 'feature_ty': 'no label', 'feature_na': 'no label', 'label': 'no label', 'policy_num': 'no label', });
-lyr_Floodfringe_23.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'ext_type': 'no label', 'status': 'no label', 'start_date': 'no label', 'location': 'no label', 'vert_datum': 'no label', 'date_check': 'no label', 'source': 'no label', 'comments': 'no label', 'ufi': 'no label', 'crt_date': 'no label', 'src_date': 'no label', 'edit_by': 'no label', 'auth_by': 'no label', 'cap_meth': 'no label', 'cap_scale': 'no label', 'online': 'no label', });
-lyr_AcidSulfateSoilRisk_24.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'createdate': 'no label', 'capture': 'no label', 'riskclass': 'no label', 'risk_categ': 'no label', 'natcode': 'no label', });
-lyr_Floodway_25.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'ext_type': 'no label', 'status': 'no label', 'start_date': 'no label', 'location': 'no label', 'vert_datum': 'no label', 'date_check': 'no label', 'source': 'no label', 'comments': 'no label', 'ufi': 'no label', 'crt_date': 'no label', 'src_date': 'no label', 'edit_by': 'no label', 'auth_by': 'no label', 'cap_meth': 'no label', 'cap_scale': 'no label', 'online': 'no label', });
-lyr_HHHeritageAgreements_26.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'place_no': 'no label', 'place_name': 'no label', 'location': 'no label', 'lga': 'no label', 'her_record': 'no label', 'date_modif': 'no label', 'cluster': 'no label', 'more_info': 'no label', });
-lyr_ProtectedAreas_27.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'id': 'no label', 'protecteda': 'no label', 'place_name': 'no label', 'gazette_da': 'no label', 'conditions': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_HHAssessmentProgram_28.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'place_no': 'no label', 'place_name': 'no label', 'location': 'no label', 'lga': 'no label', 'her_record': 'no label', 'date_modif': 'no label', 'cluster': 'no label', 'more_info': 'no label', });
-lyr_HHHeritageArea_29.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'place_no': 'no label', 'place_name': 'no label', 'location': 'no label', 'lga': 'no label', 'more_info': 'no label', 'shape_leng': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_HHHeritageList_30.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'place_no': 'no label', 'place_name': 'no label', 'location': 'no label', 'lga': 'no label', 'more_info': 'no label', 'shape_leng': 'no label', 'st_area(sh': 'no label', 'st_perimet': 'no label', });
-lyr_HHLocalSurvey_31.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'place_no': 'no label', 'place_name': 'no label', 'location': 'no label', 'lga': 'no label', 'her_record': 'no label', 'date_modif': 'no label', 'cluster': 'no label', 'more_info': 'no label', });
-lyr_HHProtectionOrder_32.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'place_no': 'no label', 'place_name': 'no label', 'location': 'no label', 'lga': 'no label', 'her_record': 'no label', 'date_modif': 'no label', 'cluster': 'no label', 'more_info': 'no label', });
-lyr_HHStateRegister_33.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'place_no': 'no label', 'place_name': 'no label', 'location': 'no label', 'lga': 'no label', 'her_record': 'no label', 'date_modif': 'no label', 'cluster': 'no label', 'more_info': 'no label', });
-lyr_WBWaterwaysBuffered_34.set('fieldLabels', {'fid': 'no label', 'DN': 'no label', });
-lyr_WAPetroleumPipeline_35.set('fieldLabels', {'oid': 'no label', 'gid': 'no label', 'title_id': 'no label', 'type': 'no label', 'issued': 'no label', 'expiry': 'no label', 'status': 'no label', 'act_abbrev': 'no label', 'coverage': 'no label', 'holder_1': 'no label', 'holder_2': 'no label', 'holder_3': 'no label', 'holder_4': 'no label', 'holder_5': 'no label', 'holder_6': 'no label', 'holder_7': 'no label', 'holder_8': 'no label', 'purpose': 'no label', 'name': 'no label', 'start_poin': 'no label', 'end_point': 'no label', 'built': 'no label', 'extract_da': 'no label', 'st_area(th': 'no label', 'st_perimet': 'no label', });
-lyr_RegionSchemeSpecialAreas_36.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'rs_code': 'no label', 'descriptio': 'no label', 'site_no': 'no label', 'label': 'no label', 'reg_scheme': 'no label', });
-lyr_StructurePlanBoundaries_37.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'filenumber': 'inline label - always visible', 'alt_title': 'inline label - always visible', 'status': 'inline label - always visible', 'endorsed_d': 'inline label - always visible', 'sp_area_ha': 'inline label - always visible', 'type': 'inline label - always visible', });
-lyr_MurrayLGA_38.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'boundary_i': 'no label', 'type_code': 'no label', 'type_descr': 'no label', 'feature_nu': 'no label', 'name': 'no label', 'abs_lga_nu': 'no label', 'postcode': 'no label', 'land_area': 'no label', 'area_deriv': 'no label', });
-lyr_Suburb_39.set('fieldLabels', {'fid': 'no label', 'LC_PLY_PID': 'no label', 'LOC_PID': 'no label', 'DT_CREATE': 'no label', 'LOC_NAME': 'no label', 'LOC_CLASS': 'no label', 'STATE': 'no label', });
-lyr_ParcelAttributes_40.set('fieldLabels', {'fid': 'hidden field', 'object_id': 'hidden field', 'Unique ID': 'hidden field', 'Suburb': 'hidden field', 'PARCEL': 'header label - always visible', 'Address': 'inline label - always visible', 'Zoned / Rezone': 'inline label - always visible', 'Zoning': 'inline label - always visible', 'Strategy': 'inline label - always visible', 'Strat Link': 'inline label - always visible', 'Overlays': 'inline label - always visible', 'Gross HA': 'inline label - always visible', 'NDH': 'inline label - always visible', 'Lot Yield @ 20dw/HA (450m2)': 'inline label - always visible', 'VALUE @ 450m2': 'header label - always visible', 'Value @ 20%DM': 'inline label - always visible', 'Current RLP': 'inline label - always visible', 'Current OPC': 'inline label - always visible', 'Value @ 10%DM': 'inline label - always visible', 'Value @ 12%DM': 'inline label - always visible', 'Value @ 15%DM': 'inline label - always visible', 'Value @ 25%DM': 'inline label - always visible', 'Value @ 30%DM': 'inline label - always visible', 'OWNERSHIP': 'inline label - always visible', 'Estate Status': 'inline label - always visible', 'Developer': 'inline label - always visible', 'Vendor Company': 'inline label - always visible', 'Vendor Names': 'inline label - always visible', 
-    'Vendor Address': 'inline label - always visible', 'Vendor Mobile': 'inline label - always visible', 'Vendor Email': 'inline label - always visible', 'Email Lead Link': 'hidden field', 'location_address': 'hidden field', });
-lyr_ParcelAttributes_40.on('precompose', function(evt) {
+lyr_WBWaterwaysBuffered_25.set('fieldImages', {'fid': 'TextEdit', 'DN': 'Range', });
+lyr_FWFloodway_26.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'ext_type': 'TextEdit', 'status': 'TextEdit', 'start_date': 'TextEdit', 'location': 'TextEdit', 'vert_datum': 'TextEdit', 'date_check': 'TextEdit', 'source': 'TextEdit', 'comments': 'TextEdit', 'ufi': 'TextEdit', 'crt_date': 'TextEdit', 'src_date': 'TextEdit', 'edit_by': 'TextEdit', 'auth_by': 'TextEdit', 'cap_meth': 'TextEdit', 'cap_scale': 'TextEdit', 'online': 'TextEdit', });
+lyr_HAHeritageAgreements_27.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
+lyr_PAProtectedAreas_28.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'id': 'TextEdit', 'protecteda': 'TextEdit', 'place_name': 'TextEdit', 'gazette_da': 'TextEdit', 'conditions': 'TextEdit', 'st_area(sh': 'TextEdit', 'st_perimet': 'TextEdit', });
+lyr_APAssessmentProgram_29.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
+lyr_HAHeritageArea_30.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'more_info': 'TextEdit', 'shape_leng': 'TextEdit', 'st_area(sh': 'TextEdit', 'st_perimet': 'TextEdit', });
+lyr_HLHeritageList_31.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'more_info': 'TextEdit', 'shape_leng': 'TextEdit', 'st_area(sh': 'TextEdit', 'st_perimet': 'TextEdit', });
+lyr_LSLocalSurvey_32.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
+lyr_POProtectionOrder_33.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
+lyr_SRStateRegister_34.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'place_no': 'TextEdit', 'place_name': 'TextEdit', 'location': 'TextEdit', 'lga': 'TextEdit', 'her_record': 'TextEdit', 'date_modif': 'TextEdit', 'cluster': 'TextEdit', 'more_info': 'TextEdit', });
+lyr_WAPPWAPetroleumPipeline_35.set('fieldImages', {'oid': 'TextEdit', 'gid': 'TextEdit', 'title_id': 'TextEdit', 'type': 'TextEdit', 'issued': 'TextEdit', 'expiry': 'TextEdit', 'status': 'TextEdit', 'act_abbrev': 'TextEdit', 'coverage': 'TextEdit', 'holder_1': 'TextEdit', 'holder_2': 'TextEdit', 'holder_3': 'TextEdit', 'holder_4': 'TextEdit', 'holder_5': 'TextEdit', 'holder_6': 'TextEdit', 'holder_7': 'TextEdit', 'holder_8': 'TextEdit', 'purpose': 'TextEdit', 'name': 'TextEdit', 'start_poin': 'TextEdit', 'end_point': 'TextEdit', 'built': 'TextEdit', 'extract_da': 'TextEdit', 'st_area(th': 'TextEdit', 'st_perimet': 'TextEdit', });
+lyr_RSSARegionSchemeSpecialAreas_36.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'rs_code': 'TextEdit', 'descriptio': 'TextEdit', 'site_no': 'TextEdit', 'label': 'TextEdit', 'reg_scheme': 'TextEdit', });
+lyr_MergedLayer_37.set('fieldImages', {'LayerName': '', 'layer': '', 'path': '', });
+lyr_StructurePlanBoundaries_38.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'filenumber': 'TextEdit', 'alt_title': 'TextEdit', 'status': 'TextEdit', 'endorsed_d': 'DateTime', 'sp_area_ha': 'TextEdit', 'type': 'TextEdit', });
+lyr_FutureGrowthArea_39.set('fieldImages', {'fid': 'TextEdit', 'id': 'TextEdit', 'Centre': 'TextEdit', });
+lyr_MurrayLGA_61.set('fieldImages', {'fid': 'TextEdit', 'objectid': 'TextEdit', 'boundary_i': 'TextEdit', 'type_code': 'TextEdit', 'type_descr': 'TextEdit', 'feature_nu': 'TextEdit', 'name': 'TextEdit', 'abs_lga_nu': 'TextEdit', 'postcode': 'TextEdit', 'land_area': 'TextEdit', 'area_deriv': 'TextEdit', });
+lyr_Suburb_62.set('fieldImages', {'fid': 'TextEdit', 'SAL_CODE21': 'TextEdit', 'SAL_NAME21': 'TextEdit', 'STE_CODE21': 'TextEdit', 'STE_NAME21': 'TextEdit', 'AUS_CODE21': 'TextEdit', 'AUS_NAME21': 'TextEdit', 'AREASQKM21': 'TextEdit', 'LOCI_URI21': 'TextEdit', 'SHAPE_Leng': 'TextEdit', 'SHAPE_Area': 'TextEdit', });
+lyr_ParcelAttributes_63.set('fieldImages', {'fid': '', 'polygon_number': '', 'usage_description': '', 'land_id': '', 'survey_label_text': '', 'OBJECTID': '', 'Suburb': '', 'PARCEL': '', 'Address': '', 'Zoned / Rezone': '', 'Current Zone': '', 'Strategy': '', 'Strat Link': '', 'Overlays': '', 'Gross HA': '', 'NDH': '', 'Lot Yield @ 20dw/HA (450m2)': '', 'VALUE @ 450m2': '', 'Market Value (20%DM)': '', 'Current RLP': '', 'Current OPC': '', 'Market Value (30%DM)': '', 'Market Value (25%DM)': '', 'Market Value (15%DM)': '', 'Market Value (12%DM)': '', 'Market Value (10%DM)': '', 'OWNERSHIP': '', 'Estate Status': '', 'Developer': '', 'Vendor Company': '', 'Vendor Names': '', 'Vendor Addresses': '', 'Vendor Mobiles': '', 'Vendor Emails': '', 'Lead Link': '', 'Lot Plan Identifier': '', });
+lyr_LPSZone_2.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'zone_numbe': 'hidden field', 'zone': 'hidden field', 'add_label': 'hidden field', 'rest_label': 'hidden field', 'specadd_la': 'hidden field', 'special_la': 'hidden field', 'label': 'hidden field', 'label_desc': 'hidden field', 'gazettal_d': 'hidden field', 'scheme_nam': 'hidden field', 'lga': 'hidden field', 'scheme_no': 'hidden field', });
+lyr_RegionSchemeZones_3.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'rs_code': 'hidden field', 'descriptio': 'hidden field', 'label': 'hidden field', 'rs_class': 'hidden field', 'reg_scheme': 'hidden field', });
+lyr_PerthandPeelLandUse_4.set('fieldLabels', {'fid': 'hidden field', 'Name': 'hidden field', 'description': 'hidden field', 'timestamp': 'hidden field', 'begin': 'hidden field', 'end': 'hidden field', 'altitudeMode': 'hidden field', 'tessellate': 'hidden field', 'extrude': 'hidden field', 'visibility': 'hidden field', 'drawOrder': 'hidden field', 'icon': 'hidden field', 'OBJECTID': 'hidden field', 'LUGROUP': 'hidden field', 'LUTYPE': 'hidden field', 'LUSUBTYPE': 'hidden field', 'SP_TITLE': 'hidden field', 'SUBREGION': 'hidden field', 'LABEL': 'hidden field', 'STAGING': 'hidden field', 'STAGINGSCH': 'hidden field', 'CHANGETOFR': 'hidden field', 'FRAMEWORKL': 'hidden field', 'DESCRIPTIO': 'hidden field', 'COMMENT_': 'hidden field', 'ADDITIONAL': 'hidden field', 'SOURCE': 'hidden field', 'REF_NO': 'hidden field', 'TYPOLOGY': 'hidden field', 'CODE': 'hidden field', 'CLASSOFACT': 'hidden field', 'COACOMMENT': 'hidden field', 'SHAPE_Leng': 'hidden field', 'SHAPE_Area': 'hidden field', 'layer': 'hidden field', 'path': 'hidden field', });
+lyr_CoastalPlanExtents_5.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'planid': 'hidden field', 'plan_name': 'hidden field', 'plan_title': 'hidden field', 'plan_date': 'hidden field', 'plan_type': 'hidden field', 'author': 'hidden field', 'summary': 'hidden field', 'status': 'hidden field', 'study_area': 'hidden field', 'region': 'hidden field', 'comments': 'hidden field', });
+lyr_GovernmentSeweragePolicy_6.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'layer': 'hidden field', 'feature_ty': 'hidden field', 'feature_na': 'hidden field', 'label': 'hidden field', 'policy_num': 'hidden field', });
+lyr_LandsofInterest_7.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'loi_pin': 'hidden field', 'loi_poly_a': 'hidden field', 'loi_identi': 'hidden field', 'loi_regno': 'hidden field', 'loi_tenure': 'hidden field', 'loi_act': 'hidden field', 'loi_catego': 'hidden field', 'loi_notes': 'hidden field', 'loi_prprie': 'hidden field', });
+lyr_LegislatedLandsandWaters_8.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'leg_pin': 'hidden field', 'leg_poly_a': 'hidden field', 'leg_class': 'hidden field', 'leg_identi': 'hidden field', 'leg_purpos': 'hidden field', 'leg_vestin': 'hidden field', 'leg_name': 'hidden field', 'leg_name_s': 'hidden field', 'leg_iucn': 'hidden field', 'leg_tenure': 'hidden field', 'leg_act': 'hidden field', 'leg_catego': 'hidden field', 'leg_notes': 'hidden field', 'leg_agreem': 'hidden field', 'leg_classi': 'hidden field', 'leg_regno': 'hidden field', });
+lyr_PerthandPeelUrbanLandDevelopmentOutlookResidential_9.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'project_id': 'hidden field', 'lga': 'hidden field', 'suburb': 'hidden field', 'estate_nam': 'hidden field', 'dev_type': 'hidden field', 'staging': 'hidden field', 'plus_10yrs': 'hidden field', 'zero_5yrs': 'hidden field', 'six_10yrs': 'hidden field', 'com_floors': 'hidden field', });
+lyr_PlanningReferralsContacts_10.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'prc_referr': 'hidden field', 'prc_contac': 'hidden field', 'prc_postal': 'hidden field', 'prc_teleph': 'hidden field', 'prc_fax_nu': 'hidden field', 'prc_email': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_SPPExclusionAreas_11.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'status': 'hidden field', 'extract_da': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_SPPExtractionSites_12.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'status': 'hidden field', 'extract_da': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_ClearingRegulationsScheduleOneAreas_13.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'schedule1_': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_10metrecontours_14.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'id': 'hidden field', 'elevation': 'hidden field', });
+lyr_BushFireProneAreas2021_15.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'lga': 'hidden field', 'designatio': 'hidden field', 'type': 'hidden field', 'designat_1': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_AboriginalCulturalHeritageHistoric_16.set('fieldLabels', {'fid': 'hidden field', 'id': 'hidden field', 'ach_identi': 'hidden field', 'name': 'hidden field', 'place_stat': 'hidden field', 'place_type': 'hidden field', 'region': 'hidden field', 'culturally': 'hidden field', 'cultural_1': 'hidden field', 'restricted': 'hidden field', 'boundary_r': 'hidden field', 'knowledge_': 'hidden field', 'legacy_id': 'hidden field', 'boundary_l': 'hidden field', 'objectid': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_AboriginalCulturalHeritageLodged_17.set('fieldLabels', {'fid': 'hidden field', 'id': 'hidden field', 'ach_identi': 'hidden field', 'name': 'hidden field', 'place_stat': 'hidden field', 'place_type': 'hidden field', 'region': 'hidden field', 'culturally': 'hidden field', 'cultural_1': 'hidden field', 'restricted': 'hidden field', 'boundary_r': 'hidden field', 'knowledge_': 'hidden field', 'legacy_id': 'hidden field', 'boundary_l': 'hidden field', 'objectid': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_AboriginalCulturalHeritageRegister_18.set('fieldLabels', {'fid': 'hidden field', 'id': 'hidden field', 'ach_identi': 'hidden field', 'name': 'hidden field', 'place_stat': 'hidden field', 'place_type': 'hidden field', 'region': 'hidden field', 'culturally': 'hidden field', 'cultural_1': 'hidden field', 'restricted': 'hidden field', 'boundary_r': 'hidden field', 'knowledge_': 'hidden field', 'legacy_id': 'hidden field', 'boundary_l': 'hidden field', 'objectid': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_AboriginalCulturalHeritageSurveyAreas_19.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'survey_rep': 'hidden field', 'survey_r_1': 'hidden field', 'survey_are': 'hidden field', 'survey_a_1': 'hidden field', 'legacy_are': 'hidden field', 'report_tit': 'hidden field', 'report_aut': 'hidden field', 'area_descr': 'hidden field', 'survey_typ': 'hidden field', 'spatial_ac': 'hidden field', 'field_surv': 'hidden field', 'desktop_su': 'hidden field', 'boundary_l': 'hidden field', });
+lyr_MiningTenements_20.set('fieldLabels', {'fid': 'hidden field', 'oid': 'hidden field', 'gid': 'hidden field', 'tenid': 'hidden field', 'type': 'hidden field', 'survstatus': 'hidden field', 'tenstatus': 'hidden field', 'holdercnt': 'hidden field', 'holder1': 'hidden field', 'addr1': 'hidden field', 'holder2': 'hidden field', 'addr2': 'hidden field', 'holder3': 'hidden field', 'addr3': 'hidden field', 'holder4': 'hidden field', 'addr4': 'hidden field', 'holder5': 'hidden field', 'addr5': 'hidden field', 'holder6': 'hidden field', 'addr6': 'hidden field', 'holder7': 'hidden field', 'addr7': 'hidden field', 'holder8': 'hidden field', 'addr8': 'hidden field', 'holder9': 'hidden field', 'addr9': 'hidden field', 'fmt_tenid': 'hidden field', 'legal_area': 'hidden field', 'unit_of_me': 'hidden field', 'special_in': 'hidden field', 'extract_da': 'hidden field', 'grantdate': 'hidden field', 'granttime': 'hidden field', 'startdate': 'hidden field', 'starttime': 'hidden field', 'enddate': 'hidden field', 'endtime': 'hidden field', 'st_area(th': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_FPMFloodplainArea_21.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'ext_type': 'hidden field', 'status': 'hidden field', 'start_date': 'hidden field', 'location': 'hidden field', 'vert_datum': 'hidden field', 'date_check': 'hidden field', 'source': 'hidden field', 'comments': 'hidden field', 'ufi': 'hidden field', 'crt_date': 'hidden field', 'src_date': 'hidden field', 'edit_by': 'hidden field', 'auth_by': 'hidden field', 'cap_meth': 'hidden field', 'cap_scale': 'hidden field', 'hyd_name': 'hidden field', 'basin_no': 'hidden field', 'basin_name': 'hidden field', 'p_site_id': 'hidden field', 'p_site_nam': 'hidden field', 'p_stage_le': 'hidden field', 'p_ahd_conv': 'hidden field', 'p_telemetr': 'hidden field', 's_site_id': 'hidden field', 's_site_nam': 'hidden field', 's_stage_le': 'hidden field', 's_ahd_conv': 'hidden field', 's_telemetr': 'hidden field', 'fwa_no': 'hidden field', 'fwa_name': 'hidden field', 'online': 'hidden field', });
+lyr_StatePlanningPolicyTransportNoiseCorridor_22.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'layer': 'hidden field', 'feature_ty': 'hidden field', 'feature_na': 'hidden field', 'label': 'hidden field', 'policy_num': 'hidden field', });
+lyr_Floodfringe_23.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'ext_type': 'hidden field', 'status': 'hidden field', 'start_date': 'hidden field', 'location': 'hidden field', 'vert_datum': 'hidden field', 'date_check': 'hidden field', 'source': 'hidden field', 'comments': 'hidden field', 'ufi': 'hidden field', 'crt_date': 'hidden field', 'src_date': 'hidden field', 'edit_by': 'hidden field', 'auth_by': 'hidden field', 'cap_meth': 'hidden field', 'cap_scale': 'hidden field', 'online': 'hidden field', });
+lyr_AcidSulfateSoilRisk_24.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'createdate': 'hidden field', 'capture': 'hidden field', 'riskclass': 'hidden field', 'risk_categ': 'hidden field', 'natcode': 'hidden field', });
+lyr_WBWaterwaysBuffered_25.set('fieldLabels', {'fid': 'hidden field', 'DN': 'hidden field', });
+lyr_FWFloodway_26.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'ext_type': 'hidden field', 'status': 'hidden field', 'start_date': 'hidden field', 'location': 'hidden field', 'vert_datum': 'hidden field', 'date_check': 'hidden field', 'source': 'hidden field', 'comments': 'hidden field', 'ufi': 'hidden field', 'crt_date': 'hidden field', 'src_date': 'hidden field', 'edit_by': 'hidden field', 'auth_by': 'hidden field', 'cap_meth': 'hidden field', 'cap_scale': 'hidden field', 'online': 'hidden field', });
+lyr_HAHeritageAgreements_27.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'place_no': 'hidden field', 'place_name': 'hidden field', 'location': 'hidden field', 'lga': 'hidden field', 'her_record': 'hidden field', 'date_modif': 'hidden field', 'cluster': 'hidden field', 'more_info': 'hidden field', });
+lyr_PAProtectedAreas_28.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'id': 'hidden field', 'protecteda': 'hidden field', 'place_name': 'hidden field', 'gazette_da': 'hidden field', 'conditions': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_APAssessmentProgram_29.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'place_no': 'hidden field', 'place_name': 'hidden field', 'location': 'hidden field', 'lga': 'hidden field', 'her_record': 'hidden field', 'date_modif': 'hidden field', 'cluster': 'hidden field', 'more_info': 'hidden field', });
+lyr_HAHeritageArea_30.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'place_no': 'hidden field', 'place_name': 'hidden field', 'location': 'hidden field', 'lga': 'hidden field', 'more_info': 'hidden field', 'shape_leng': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_HLHeritageList_31.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'place_no': 'hidden field', 'place_name': 'hidden field', 'location': 'hidden field', 'lga': 'hidden field', 'more_info': 'hidden field', 'shape_leng': 'hidden field', 'st_area(sh': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_LSLocalSurvey_32.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'place_no': 'hidden field', 'place_name': 'hidden field', 'location': 'hidden field', 'lga': 'hidden field', 'her_record': 'hidden field', 'date_modif': 'hidden field', 'cluster': 'hidden field', 'more_info': 'hidden field', });
+lyr_POProtectionOrder_33.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'place_no': 'hidden field', 'place_name': 'hidden field', 'location': 'hidden field', 'lga': 'hidden field', 'her_record': 'hidden field', 'date_modif': 'hidden field', 'cluster': 'hidden field', 'more_info': 'hidden field', });
+lyr_SRStateRegister_34.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'place_no': 'hidden field', 'place_name': 'hidden field', 'location': 'hidden field', 'lga': 'hidden field', 'her_record': 'hidden field', 'date_modif': 'hidden field', 'cluster': 'hidden field', 'more_info': 'hidden field', });
+lyr_WAPPWAPetroleumPipeline_35.set('fieldLabels', {'oid': 'hidden field', 'gid': 'hidden field', 'title_id': 'hidden field', 'type': 'hidden field', 'issued': 'hidden field', 'expiry': 'hidden field', 'status': 'hidden field', 'act_abbrev': 'hidden field', 'coverage': 'hidden field', 'holder_1': 'hidden field', 'holder_2': 'hidden field', 'holder_3': 'hidden field', 'holder_4': 'hidden field', 'holder_5': 'hidden field', 'holder_6': 'hidden field', 'holder_7': 'hidden field', 'holder_8': 'hidden field', 'purpose': 'hidden field', 'name': 'hidden field', 'start_poin': 'hidden field', 'end_point': 'hidden field', 'built': 'hidden field', 'extract_da': 'hidden field', 'st_area(th': 'hidden field', 'st_perimet': 'hidden field', });
+lyr_RSSARegionSchemeSpecialAreas_36.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'rs_code': 'hidden field', 'descriptio': 'hidden field', 'site_no': 'hidden field', 'label': 'hidden field', 'reg_scheme': 'hidden field', });
+lyr_MergedLayer_37.set('fieldLabels', {'LayerName': 'no label', 'layer': 'no label', 'path': 'no label', });
+lyr_StructurePlanBoundaries_38.set('fieldLabels', {'fid': 'no label', 'objectid': 'no label', 'filenumber': 'no label', 'alt_title': 'no label', 'status': 'no label', 'endorsed_d': 'no label', 'sp_area_ha': 'no label', 'type': 'no label', });
+lyr_FutureGrowthArea_39.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'Centre': 'no label', });
+lyr_MurrayLGA_61.set('fieldLabels', {'fid': 'hidden field', 'objectid': 'hidden field', 'boundary_i': 'hidden field', 'type_code': 'hidden field', 'type_descr': 'hidden field', 'feature_nu': 'hidden field', 'name': 'hidden field', 'abs_lga_nu': 'hidden field', 'postcode': 'hidden field', 'land_area': 'hidden field', 'area_deriv': 'hidden field', });
+lyr_Suburb_62.set('fieldLabels', {'fid': 'hidden field', 'SAL_CODE21': 'hidden field', 'SAL_NAME21': 'hidden field', 'STE_CODE21': 'hidden field', 'STE_NAME21': 'hidden field', 'AUS_CODE21': 'hidden field', 'AUS_NAME21': 'hidden field', 'AREASQKM21': 'hidden field', 'LOCI_URI21': 'hidden field', 'SHAPE_Leng': 'hidden field', 'SHAPE_Area': 'hidden field', });
+lyr_ParcelAttributes_63.set('fieldLabels', {'fid': 'hidden field', 'polygon_number': 'hidden field', 'usage_description': 'hidden field', 'land_id': 'hidden field', 'survey_label_text': 'hidden field', 'OBJECTID': 'hidden field', 'Suburb': 'hidden field', 'PARCEL': 'header label - always visible', 'Address': 'inline label - always visible', 'Zoned / Rezone': 'inline label - always visible', 'Current Zone': 'inline label - always visible', 'Strategy': 'inline label - always visible', 'Strat Link': 'inline label - always visible', 'Overlays': 'inline label - always visible', 'Gross HA': 'inline label - always visible', 'NDH': 'inline label - always visible', 'Lot Yield @ 20dw/HA (450m2)': 'inline label - always visible', 'VALUE @ 450m2': 'header label - always visible', 'Market Value (20%DM)': 'inline label - always visible', 'Current RLP': 'inline label - always visible', 'Current OPC': 'inline label - always visible', 'Market Value (30%DM)': 'inline label - always visible', 'Market Value (25%DM)': 'inline label - always visible', 'Market Value (15%DM)': 'inline label - always visible', 'Market Value (12%DM)': 'inline label - always visible', 'Market Value (10%DM)': 'inline label - always visible', 'OWNERSHIP': 'header label - always visible', 'Estate Status': 'inline label - always visible', 'Developer': 'inline label - always visible', 'Vendor Company': 'inline label - always visible', 'Vendor Names': 'inline label - always visible', 'Vendor Addresses': 'inline label - always visible', 'Vendor Mobiles': 'inline label - always visible', 'Vendor Emails': 'inline label - always visible', 'Lead Link': 'inline label - always visible', 'Lot Plan Identifier': 'hidden field', });
+lyr_ParcelAttributes_63.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
