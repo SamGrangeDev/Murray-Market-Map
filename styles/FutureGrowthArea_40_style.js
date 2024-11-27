@@ -30,7 +30,7 @@ case 'North Dandalup Prospected DSP Area':
                     break;
 case 'Ravenswood DSP Prospected Area':
                     return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: [16.34,3.268,6.536,3.268], lineCap: 'butt', lineJoin: 'miter', width: 3.268}),fill: new ol.style.Fill({color: 'rgba(119,131,15,0.3058823529411765)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: [16.34,3.268,6.536,3.268], lineCap: 'butt', lineJoin: 'miter', width: 3.268}),fill: new ol.style.Fill({color: 'rgba(119,131,15,0.0)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

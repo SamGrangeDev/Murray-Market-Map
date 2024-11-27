@@ -6,7 +6,7 @@ function categories_StructurePlanBoundaries_39(feature, value, size, resolution,
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
                 switch(valueStr) {case 'District structure plan':
                     return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(255,0,223,1.0)', lineDash: [26.599999999999998,5.319999999999999,10.639999999999999,5.319999999999999,10.639999999999999,5.319999999999999], lineCap: 'butt', lineJoin: 'miter', width: 5.319999999999999}),fill: new ol.style.Fill({color: 'rgba(157,223,95,0.0)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(255,0,223,1.0)', lineDash: [15.2,3.04,6.08,3.04,6.08,3.04], lineCap: 'butt', lineJoin: 'miter', width: 3.04}),fill: new ol.style.Fill({color: 'rgba(157,223,95,0.0)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -14,7 +14,7 @@ function categories_StructurePlanBoundaries_39(feature, value, size, resolution,
                     break;
 case 'Structure plan':
                     return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(0,255,0,1.0)', lineDash: [26.599999999999998,5.319999999999999,10.639999999999999,5.319999999999999,10.639999999999999,5.319999999999999], lineCap: 'butt', lineJoin: 'miter', width: 5.319999999999999}),fill: new ol.style.Fill({color: 'rgba(204,47,123,0.0)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(0,255,0,1.0)', lineDash: [15.2,3.04,6.08,3.04,6.08,3.04], lineCap: 'butt', lineJoin: 'miter', width: 3.04}),fill: new ol.style.Fill({color: 'rgba(204,47,123,0.0)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

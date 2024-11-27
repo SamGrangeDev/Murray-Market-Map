@@ -3,7 +3,7 @@ var size = 0;
 var placement = 'point';
 
 // Define minimum and maximum font sizes
-var minFontSize = 10;  // Adjust as needed
+var minFontSize = 13;  // Adjust as needed
 var maxFontSize = 20; // Adjust as needed
 
 // Function to calculate dynamic font size based on zoom level
@@ -24,7 +24,7 @@ var style_EstateLabel_67 = function(feature, resolution) {
     var labelFont = getFontSize(zoomLevel) + " 'Poppins', sans-serif";  // Dynamic font size and font family based on zoom level
     var labelFill = "#ffffff";  // Text color set to white
     var bufferColor = "#fa0004";  // Stroke color
-    var bufferWidth = 2.0;  // Stroke width
+    var bufferWidth = 4.0;  // Stroke width
     var rotationAngle = 0 * (Math.PI / 180);  // -25 degrees in radians
 
     // Access individual attributes
