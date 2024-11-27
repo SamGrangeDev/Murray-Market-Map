@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([12873682.325712, -3872367.960805, 12965909.220139, -3810049.277494], map.getSize());
+map.getView().fit([12871100.251439, -3872001.630609, 12956312.150809, -3816299.634711], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -213,7 +213,13 @@ function onPointerMove(evt) {
             }
         }
     });
-    if (doHighlight) {
+    if (popupText == '<ul>') {
+        popupText = '';
+    } else {
+        popupText += '</ul>';
+    }
+    
+	if (doHighlight) {
         if (currentFeature !== highlight) {
             // Check if highlight is defined and exists in the source before removing
             if (highlight && featureOverlay.getSource().getFeatures().includes(highlight)) {
@@ -295,6 +301,7 @@ function onPointerMove(evt) {
             closer.blur();
         }
     };
+
 map.on('pointermove', onPointerMove);
 
 var popupContent = '';
@@ -850,8 +857,8 @@ if (elementToMove && parentElement) {
 //layer search
 
 var searchLayer = new SearchLayer({
-    layer: lyr_ParcelAttributes_64,
-    colName: 'Address',
+    layer: lyr_ParcelAttributes_66,
+    colName: 'Lot Plan Identifier',
     zoom: 10,
     collapsed: true,
     map: map
