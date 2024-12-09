@@ -1,1 +1,0 @@
-var json_PAProtectedAreas_50 = {"type":"FeatureCollection","name":"PAProtectedAreas_50","features":[]}
